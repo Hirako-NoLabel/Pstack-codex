@@ -10,5 +10,6 @@ function collect(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true}
  if(entry.isDirectory())collect(p);else if(entry.name.endsWith('.test.mjs'))files.push(p);
 }}
 collect(path.join(root,'tests'));collect(path.join(root,'plugins'));
+collect(path.join(root,'docs','acceptance'));
 const r=spawnSync(process.execPath,['--test',...files],{cwd:root,stdio:'inherit'});
 if(r.error)throw r.error;process.exitCode=r.status??1;

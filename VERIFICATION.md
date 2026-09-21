@@ -15,6 +15,7 @@ Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node *
 | PowerShell wrapper lifecycle | Pass | Real local Git source/clone; 0.1.0 → 0.1.1 fast-forward update, installed cache marker and version checked, uninstall/reinstall, clean tree. |
 | Git Bash wrapper lifecycle | Pass after fix | Same real lifecycle on Windows. Initial path-format comparison failed; normalization fixed and failed side rerun. **Not a native Linux/macOS test.** |
 | Portable helper tests | 20/20 pass | Context recovery/corruption, upstream diff/staging boundary, configuration/effort validation, TSV injection/lock, plan gates, real worktree audit, Benny protocol. |
+| Executable acceptance regression suite | 22/22 pass | Bug Fix 5 + Feature 6 + Architect 11 now run automatically through test-all alongside 20 helper tests (42 total); this reruns fixture behavior, not native agent workflows. Three-OS CI uses this same command but has not executed remotely. |
 | Bun orchestrator/watcher tests | 57/57 pass, 219 assertions | Retained upstream domain tests plus gh frontier/cycle adaptation. Mock GitHub reader is not live service verification. |
 | Type checks | Pass | Entire poteto scripts tree including orchestrator and watcher. |
 | Bug Fix + TDD | Pass on sample | Actual concurrent-loader defect: baseline 2 failures, fixed 5/5. Failing-test commit precedes fix commit. |

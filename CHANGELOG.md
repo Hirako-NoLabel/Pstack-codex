@@ -7,5 +7,6 @@
 - Introduced native role/model routing boundaries, portable context checkpoints and project-scoped history fallback.
 - Added official CLI installation/update/removal wrappers and review-first upstream comparison tooling.
 - Preserved platform gaps and separate verification levels in the compatibility matrix.
+- Included executable Bug Fix, Feature and Architect acceptance fixtures in the standard test command and all three CI operating-system jobs; CI execution still awaits publication.
 
 See VERIFICATION.md for release readiness and actual test results; this entry is not a claim that every host or external service passed.
