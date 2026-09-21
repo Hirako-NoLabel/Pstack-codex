@@ -1,6 +1,6 @@
 {
   "name": "pstack-codex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "High-fidelity OpenAI adaptation of Lauren Tan’s PStack engineering workflows.",
   "author": {
     "name": "Pstack-codex contributors; upstream Lauren Tan"

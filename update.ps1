@@ -1,5 +1,7 @@
 param()
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'scripts/windows-git.ps1')
+Invoke-PstackLongPathGit {
 $gitRoot = & git -C $PSScriptRoot rev-parse --show-toplevel
 if ($LASTEXITCODE -ne 0 -or [IO.Path]::GetFullPath($gitRoot) -ne [IO.Path]::GetFullPath($PSScriptRoot)) { throw 'Run from the root of a dedicated PStack checkout.' }
 & git -C $PSScriptRoot diff --quiet
@@ -12,3 +14,5 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & codex plugin add 'pstack-codex@personal'
 exit $LASTEXITCODE
+
+}

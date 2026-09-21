@@ -16,6 +16,13 @@ const source=githubSource || root;
 fs.mkdirSync(parent,{recursive:true});
 const home=fs.mkdtempSync(path.join(parent,'fresh home 中文 '));
 const env={...process.env,CODEX_HOME:home};
+if(process.platform==='win32') {
+  const count=Number(env.GIT_CONFIG_COUNT ?? 0);
+  if(!Number.isSafeInteger(count)||count<0)throw new Error('Invalid GIT_CONFIG_COUNT');
+  env['GIT_CONFIG_KEY_'+count]='core.longpaths';
+  env['GIT_CONFIG_VALUE_'+count]='true';
+  env.GIT_CONFIG_COUNT=String(count+1);
+}
 const evidence=[];
 const run=(args) => {
   const output=execFileSync(codex,args,{cwd:root,env,encoding:'utf8',timeout:60000});

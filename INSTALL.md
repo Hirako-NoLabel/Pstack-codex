@@ -17,10 +17,12 @@ codex plugin add pstack-codex@personal
 
 The generated marketplace identifier is `personal`. If a different configured source already uses that name, stop rather than replacing it. Use the official plugin-creator to generate a distinct catalog name and update the selector consistently. The installer does not edit an existing personal marketplace file.
 
+Windows Git checkout can fail with `Filename too long` when the Codex home has a long path. The PowerShell install/update wrappers temporarily enable `core.longpaths=true` for child Git processes and restore the process environment afterward. For direct Codex marketplace commands on Windows, enable Git long-path support first or use the wrapper, for example `./install.ps1 -Source Hirako-NoLabel/Pstack-codex`. The native lifecycle test uses the same child-process setting; successful tests do not prove direct CLI installation without that prerequisite. No global Git configuration is changed by the wrappers.
+
 ## From a checkout, Windows
 
 ```powershell
-git clone https://github.com/Hirako-NoLabel/Pstack-codex.git
+git -c core.longpaths=true clone https://github.com/Hirako-NoLabel/Pstack-codex.git
 cd Pstack-codex
 ./install.ps1
 ```

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 — 2026-09-22
+
+- Enable process-scoped Git long-path handling in Windows installation, update and native lifecycle verification; preserve existing Git environment configuration and restore wrapper state.
+
 ## 0.1.0 — 2026-09-22
 
 - Audited and pinned Cursor PStack 0.15.2; retained the full original snapshot and MIT notice.
