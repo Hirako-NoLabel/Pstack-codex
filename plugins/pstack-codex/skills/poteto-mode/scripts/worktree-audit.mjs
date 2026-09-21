@@ -46,7 +46,7 @@ export function audit({repo,base,activePaths,measureSize=false,withPrs=false},ru
  let reference=base;
  if(!reference){try{reference=runner(repo,['symbolic-ref','--quiet','refs/remotes/origin/HEAD']).trim();}catch{throw new Error('default remote base unknown; pass --base <verified-ref>');}}
  runner(repo,['rev-parse','--verify',`${reference}^{commit}`]);
- const normalize=value=>{const normalized=path.resolve(value);return process.platform==='win32'?normalized.toLowerCase():normalized;};
+ const normalize=value=>{let normalized;try{normalized=fs.realpathSync.native(value);}catch{normalized=path.resolve(value);}return process.platform==='win32'?normalized.toLowerCase():normalized;};
  const activeSet=activePaths===undefined?null:new Set(activePaths.map(normalize));
  let prs=[],prLookup=withPrs?'available':'not-requested';
  if(withPrs){try{prs=JSON.parse(execFileSync('gh',['pr','list','--state','all','--author','@me','--limit','1000','--json','number,state,headRefName,headRefOid'],{cwd:repo,encoding:'utf8',stdio:['ignore','pipe','pipe']}));if(!Array.isArray(prs))throw new Error('invalid PR list');if(prs.length===1000)prLookup='possibly-truncated';}catch{prLookup='unavailable';}}
