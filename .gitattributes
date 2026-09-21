@@ -5,3 +5,4 @@
 *.png binary
 *.jpg binary
 upstream/** -text
+docs/acceptance/reflect/** -text
