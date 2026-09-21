@@ -39,7 +39,7 @@ The nested plugin directory follows the official generated marketplace layout. `
 ## Maintain
 
 ```sh
-node --test tests/*.test.mjs
+node scripts/test-all.mjs
 node scripts/validate.mjs
 ```
 

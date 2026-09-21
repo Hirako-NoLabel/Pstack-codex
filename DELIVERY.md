@@ -1,6 +1,6 @@
 # Pstack-codex 交付说明
 
-这是已实现、可本地安装的候选版，已获用户授权公开发布 GitHub，正在准备上传。目标仓库为 `Hirako-NoLabel/Pstack-codex`。
+已按用户授权公开发布为 [Pstack-codex](https://github.com/Hirako-NoLabel/Pstack-codex)，当前版本 0.1.1。
 
 ## 范围和计数
 
@@ -36,7 +36,7 @@
 
 主要限制包括：完整聊天历史、跨模型族评审、云 VM/嵌套深度、跨重启调度、真实 UI/录屏/性能负载、PR/合并服务、Benny 外部集成。唯一 D 类是 `make-bot-ui` 的 Cursor/Grok 原生 webhook 唤醒与秘密输入卡片，保留完整需求和外部配置替代方案，未虚构 OpenAI API。
 
-原生 macOS/Linux 与 ChatGPT Work 尚未实测。Windows Git Bash 不算原生 Linux。已附三系统 CI，发布后仍需等待其真实结果。
+Windows、macOS、Linux 的 GitHub Actions 检查均通过（50 项标准测试、57 项 Bun 测试及类型检查）。公开 GitHub 源的 Windows 安装、47 技能发现、卸载、重装和 0.1.0 → 0.1.1 更新已实测。macOS/Linux 的 Codex 原生安装与 ChatGPT Work 仍未实测；CI 不替代宿主兼容验收。
 
 ## 使用和维护
 
@@ -48,4 +48,4 @@
 - [上游更新检测和审阅同步](UPSTREAM.md)
 - [完整指南](plugins/pstack-codex/docs/guide/README.md)
 
-本地安装运行 `install.ps1`，POSIX shell 使用 `sh install.sh`。安装后在新 Codex 任务中调用 `$poteto-mode`。GitHub 源安装需先获准发布仓库。没有向你的真实 Codex 配置安装测试副本，也没有激活 Benny、发送外部消息或创建 PR。
+本地安装运行 `install.ps1`，POSIX shell 使用 `sh install.sh`。安装后在新 Codex 任务中调用 `$poteto-mode`。GitHub 源安装步骤见 INSTALL.md；Windows 使用已处理长路径的 PowerShell 安装脚本。没有向你的真实 Codex 配置安装测试副本，也没有激活 Benny、发送外部消息或创建 PR。

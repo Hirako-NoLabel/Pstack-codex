@@ -1,6 +1,6 @@
 # Verification report
 
-Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node **24.12.0**, Bun **1.4.2**. This is a tested release candidate, not certified 1:1 parity across all platforms. Public GitHub publication has been authorized by the owner; upload is pending.
+Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node **24.12.0**, Bun **1.4.2**. This is a tested release candidate, not certified 1:1 parity across all platforms. Published publicly at https://github.com/Hirako-NoLabel/Pstack-codex with owner authorization.
 
 ## Results
 
@@ -15,7 +15,7 @@ Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node *
 | PowerShell wrapper lifecycle | Pass | Real local Git source/clone; 0.1.0 → 0.1.1 fast-forward update, installed cache marker and version checked, uninstall/reinstall, clean tree. |
 | Git Bash wrapper lifecycle | Pass after fix | Same real lifecycle on Windows. Initial path-format comparison failed; normalization fixed and failed side rerun. **Not a native Linux/macOS test.** |
 | Portable helper tests | 20/20 pass | Context recovery/corruption, upstream diff/staging boundary, configuration/effort validation, TSV injection/lock, plan gates, real worktree audit, Benny protocol. |
-| Executable acceptance regression suite | 30/30 pass | Historical Bug Fix 5 + core rerun 8 + Feature 6 + Architect 11 run automatically through test-all alongside 20 helper tests (50 total); this reruns fixture behavior, not native agent workflows. Three-OS CI uses this same command but has not executed remotely. |
+| Executable acceptance regression suite | 30/30 pass | Historical Bug Fix 5 + core rerun 8 + Feature 6 + Architect 11 run automatically through test-all alongside 20 helper tests (50 total); this reruns fixture behavior, not native agent workflows. Three-OS GitHub Actions executed this same command successfully. |
 | Bun orchestrator/watcher tests | 57/57 pass, 219 assertions | Retained upstream domain tests plus gh frontier/cycle adaptation. Mock GitHub reader is not live service verification. |
 | Type checks | Pass | Entire poteto scripts tree including orchestrator and watcher. |
 | Bug Fix + TDD | Pass on core rerun | Native how/why lanes, delegated fix, independent review; pre-work phase commit precedes red tests and fix. Eight checks preserve synchronous baseline contracts; red 6 pass/2 fail to green 8 pass. Original 5-test sample retained historically; Swarm leaf phase timing limitation disclosed. |
@@ -60,7 +60,7 @@ After authorized publication, verify the actual remote source with:
 node scripts/test-native-host.mjs /absolute/path/to/codex /temporary/github-evidence Hirako-NoLabel/Pstack-codex
 ```
 
-The optional fourth argument uses a GitHub marketplace on `main`, its Git refresh command, and the same isolated discovery/remove/reinstall checks. This remote branch has not run yet. An unchanged-source refresh does not prove a version-changing update; that still requires a published source change and installed-cache readback. The default local-source lifecycle was rerun successfully after adding this option (47 skills); see `docs/verification/native-host-source-option.json`.
+The optional fourth argument uses a GitHub marketplace on `main`, its Git refresh command, and the same isolated discovery/remove/reinstall checks. This remote lifecycle passed with 47 skills; see `docs/verification/github-native-longpath.json`. A subsequent published 0.1.0 to 0.1.1 update was verified in the same isolated home by installed-cache readback; see `docs/verification/github-upgrade.json`. Windows tests enable process-scoped Git long-path support. The default local-source lifecycle was rerun successfully after adding this option (47 skills); see `docs/verification/native-host-source-option.json`.
 
 ## Findings fixed before delivery
 
@@ -76,7 +76,7 @@ The optional fourth argument uses a GitHub marketplace on `main`, its Git refres
 
 ## Remaining verification gaps
 
-No native macOS or Linux host was available. The three-OS GitHub Actions workflow is supplied but has not run before publication. ChatGPT Work/ordinary Chat were not installed or executed live. No live gh authentication/PR queue/merge, multi-family model panel, cloud VM fleet, scheduler restart, complete-history mining, personal-mode generation, real UI recording/pixel comparison, profiler workload, or live Benny Slack/tracker/event integration was exercised.
+GitHub-hosted Windows, macOS and Linux runners passed validation, all 50 standard tests, 57 Bun tests and type checking in [run 35636803262](https://github.com/Hirako-NoLabel/Pstack-codex/actions/runs/35636803262). This verifies portable tooling; native Codex installation on macOS/Linux remains untested. ChatGPT Work/ordinary Chat were not installed or executed live. No live gh authentication/PR queue/merge, multi-family model panel, cloud VM fleet, scheduler restart, complete-history mining, personal-mode generation, real UI recording/pixel comparison, profiler workload, or live Benny Slack/tracker/event integration was exercised.
 
 All 75 named source entries were audited and packaged. **12 entries received sampled agent workflow execution; 63 have no sampled full workflow run.** Helper tests and discovery do not erase that gap. **0 entries are certified complete 1:1 parity across all target hosts.** Detailed A/B/C/D architectural counts and every non-complete entry are in MIGRATION_MATRIX.md.
 
@@ -88,4 +88,4 @@ Evidence is under `docs/verification` and `docs/acceptance`. Audit/implementatio
 
 The current project display name is Pstack-codex, the installable identifier is `pstack-codex@personal`, and the canonical repository is https://github.com/Hirako-NoLabel/Pstack-codex. Historical receipts under docs/acceptance, docs/verification and docs/audit retain their original names and paths as recorded evidence.
 
-After renaming, the official plugin validator passed, repository validation passed (47 skills, 23 playbooks, 158 unchanged upstream files and 197 links), all 50 standard tests passed, and an actual isolated Codex CLI install/discover/reload/remove/reinstall cycle passed with 47 skills. Public publication is authorized; remote upload and remote-source verification are pending.
+After renaming, the official plugin validator passed, repository validation passed (47 skills, 23 playbooks, 158 unchanged upstream files and 197 links), all 50 standard tests passed, and an actual isolated Codex CLI install/discover/reload/remove/reinstall cycle passed with 47 skills. Public upload, Windows remote-source lifecycle and a version-changing 0.1.0 to 0.1.1 update have passed.

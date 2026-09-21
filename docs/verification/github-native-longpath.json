@@ -1,0 +1,564 @@
+[
+  {
+    "args": [
+      "--version"
+    ],
+    "output": "codex-cli 0.155.0-alpha.9.2\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "marketplace",
+      "add",
+      "Hirako-NoLabel/Pstack-codex",
+      "--ref",
+      "main",
+      "--json"
+    ],
+    "output": "{\n  \"marketplaceName\": \"personal\",\n  \"installedRoot\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\github-native-longpath\\\\fresh home 中文 ns55wU\\\\.tmp\\\\marketplaces\\\\personal\",\n  \"alreadyAdded\": false\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "add",
+      "pstack-codex@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-codex@personal\",\n  \"name\": \"pstack-codex\",\n  \"marketplaceName\": \"personal\",\n  \"version\": \"0.1.0\",\n  \"installedPath\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\github-native-longpath\\\\fresh home 中文 ns55wU\\\\plugins\\\\cache\\\\personal\\\\pstack-codex\\\\0.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "list",
+      "--json"
+    ],
+    "output": "{\n  \"installed\": [\n    {\n      \"pluginId\": \"pstack-codex@personal\",\n      \"name\": \"pstack-codex\",\n      \"marketplaceName\": \"personal\",\n      \"version\": \"0.1.0\",\n      \"installed\": true,\n      \"enabled\": true,\n      \"source\": {\n        \"source\": \"local\",\n        \"path\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\github-native-longpath\\\\fresh home 中文 ns55wU\\\\.tmp\\\\marketplaces\\\\personal\\\\plugins\\\\pstack-codex\"\n      },\n      \"marketplaceSource\": {\n        \"sourceType\": \"git\",\n        \"source\": \"https://github.com/Hirako-NoLabel/Pstack-codex.git\"\n      },\n      \"installPolicy\": \"AVAILABLE\",\n      \"authPolicy\": \"ON_INSTALL\"\n    }\n  ],\n  \"available\": []\n}\n"
+  },
+  {
+    "discovery": [
+      {
+        "name": "pstack-codex:architect",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:arena",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:automate-me",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:blast-radius",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:bro",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:create-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:figure-it-out",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:how",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:interrogate",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:maintain-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:make-bot-ui",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:no-comments",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:poteto-mode",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-attack-the-premise",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-boundary-discipline",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-build-the-lever",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-encode-lessons-in-structure",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-exhaust-the-design-space",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-experience-first",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-fix-root-causes",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-foundational-thinking",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-guard-the-context-window",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-laziness-protocol",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-make-operations-idempotent",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-migrate-callers-then-delete-legacy-apis",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-minimize-reader-load",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-model-the-domain",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-never-block-on-the-human",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-outcome-oriented-execution",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-prove-it-works",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-redesign-from-first-principles",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-separate-before-serializing-shared-state",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-sequence-verifiable-units",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-subtract-before-you-add",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-test-behavior-not-implementation",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-type-system-discipline",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:recall",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:reflect",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:setup-pstack",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:show-me-your-work",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:swarm",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:tdd",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:teach",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:technical-writing",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:typescript-best-practices",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:unslop",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:why",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "args": [
+      "plugin",
+      "marketplace",
+      "upgrade",
+      "personal",
+      "--json"
+    ],
+    "output": "{\n  \"selectedMarketplaces\": [\n    \"personal\"\n  ],\n  \"upgradedRoots\": [\n    \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\github-native-longpath\\\\fresh home 中文 ns55wU\\\\.tmp\\\\marketplaces\\\\personal\"\n  ],\n  \"errors\": []\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "add",
+      "pstack-codex@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-codex@personal\",\n  \"name\": \"pstack-codex\",\n  \"marketplaceName\": \"personal\",\n  \"version\": \"0.1.0\",\n  \"installedPath\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\github-native-longpath\\\\fresh home 中文 ns55wU\\\\plugins\\\\cache\\\\personal\\\\pstack-codex\\\\0.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "remove",
+      "pstack-codex@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-codex@personal\",\n  \"name\": \"pstack-codex\",\n  \"marketplaceName\": \"personal\"\n}\n"
+  },
+  {
+    "discovery": [],
+    "errors": []
+  },
+  {
+    "args": [
+      "plugin",
+      "add",
+      "pstack-codex@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-codex@personal\",\n  \"name\": \"pstack-codex\",\n  \"marketplaceName\": \"personal\",\n  \"version\": \"0.1.0\",\n  \"installedPath\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\github-native-longpath\\\\fresh home 中文 ns55wU\\\\plugins\\\\cache\\\\personal\\\\pstack-codex\\\\0.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n"
+  },
+  {
+    "discovery": [
+      {
+        "name": "pstack-codex:architect",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:arena",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:automate-me",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:blast-radius",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:bro",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:create-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:figure-it-out",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:how",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:interrogate",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:maintain-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:make-bot-ui",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:no-comments",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:poteto-mode",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-attack-the-premise",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-boundary-discipline",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-build-the-lever",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-encode-lessons-in-structure",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-exhaust-the-design-space",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-experience-first",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-fix-root-causes",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-foundational-thinking",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-guard-the-context-window",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-laziness-protocol",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-make-operations-idempotent",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-migrate-callers-then-delete-legacy-apis",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-minimize-reader-load",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-model-the-domain",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-never-block-on-the-human",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-outcome-oriented-execution",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-prove-it-works",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-redesign-from-first-principles",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-separate-before-serializing-shared-state",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-sequence-verifiable-units",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-subtract-before-you-add",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-test-behavior-not-implementation",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:principle-type-system-discipline",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:recall",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:reflect",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:setup-pstack",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:show-me-your-work",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:swarm",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:tdd",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:teach",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:technical-writing",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:typescript-best-practices",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:unslop",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      },
+      {
+        "name": "pstack-codex:why",
+        "enabled": true,
+        "pluginId": "pstack-codex@personal"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "result": "PASS",
+    "skill_count": 47,
+    "source": "Hirako-NoLabel/Pstack-codex",
+    "scope": "Fresh CODEX_HOME, real GitHub marketplace fetch/refresh and skills/list lifecycle. Refresh without a source change does not prove a version-changing update; no model workflow execution."
+  }
+]

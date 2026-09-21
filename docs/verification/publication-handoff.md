@@ -1,3 +1,5 @@
+> Historical pre-publication handoff, superseded on 2026-09-22: the user authorized public publication and the name Pstack-codex. Publication and remote lifecycle verification are complete; see ../../VERIFICATION.md. The original record follows unchanged.
+
 # Publication handoff
 
 Current state: local release candidate only. No repository creation or external publication is authorized. A read-only GitHub connector lookup for Hirako-NoLabel/pstack-openai returned NOT_FOUND/404 on 2026-09-22; this means the connected identity cannot retrieve it, not proof that no private repository exists. The local repository has no remote configured.

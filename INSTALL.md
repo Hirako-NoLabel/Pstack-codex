@@ -8,7 +8,7 @@ Install Codex with plugin marketplace and plugin add/remove support, plus Git. T
 
 ## From GitHub
 
-These commands become usable once the repository is published. Until then use the local checkout below.
+The public source is [Hirako-NoLabel/Pstack-codex](https://github.com/Hirako-NoLabel/Pstack-codex). Remote installation and version-changing update were verified on Windows.
 
 ```sh
 codex plugin marketplace add Hirako-NoLabel/Pstack-codex --ref main

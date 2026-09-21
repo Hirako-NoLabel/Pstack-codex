@@ -12,18 +12,18 @@
 | 6. Model routing | 角色/模型/推理配置和校验，默认继承宿主 | 不保证 Skill 强制切换模型；跨模型族面板未测 |
 | 7. Recall/Reflect | 仓库状态恢复测试、Reflect 三并行镜头与独立汇总验收 | 来源为明确标注的摘要，非完整历史；未自动应用规则提案 |
 | 8. Automate Me | 保留习惯提取、项目证据降级、访谈与自定义模式生成流程 | 个性化模式生成尚未实测，不冒充已读全局历史 |
-| 9. 跨设备安装 | PowerShell/Git Bash、全新克隆与隔离配置的真实生命周期 | GitHub 发布待授权；原生 macOS/Linux 未测 |
-| 10. 两层更新 | 自身快进更新、真实缓存版本核对、upstream diff/stage 与边界测试 | 远程 GitHub 安装尚未执行；上游同步保持人工审阅 |
+| 9. 跨设备安装 | PowerShell/Git Bash、全新克隆与隔离配置的真实生命周期 | GitHub 源 Windows 生命周期已通过；macOS/Linux 原生 Codex 安装未测 |
+| 10. 两层更新 | 自身快进更新、真实缓存版本核对、upstream diff/stage 与边界测试 | 公开源 0.1.0 → 0.1.1 更新已核对；上游同步保持人工审阅 |
 | 11. Work 兼容 | 分平台 Supported/Partial/Unsupported/Untested 表 | Work 全部保留 live-untested，不宣称完全支持 |
 | 12. 禁止事项 | 原版权与源快照保留、D 类未删除、无虚构平台接口 | 继续保持测试事实与架构判断分离 |
 | 13. 实际验证 | 官方校验、50 项统一测试及 57 项 Bun 测试、类型检查、工作流抽样、全新安装 | 原生双平台、远程服务及未抽样工作流待补 |
-| 14. 可维护交付 | 六份指定文档、代码、测试、CI、安装更新脚本及 ZIP | 未发布 GitHub，尚不是已完成的 GitHub 可安装交付 |
+| 14. 可维护交付 | 六份指定文档、代码、测试、CI、安装更新脚本及 ZIP | 已公开发布 Pstack-codex 并验证 GitHub 安装；其余平台限制如实保留 |
 
 所有测试的具体证据与限制见 [VERIFICATION](../../VERIFICATION.md)。分类数量和全部非完全兼容条目见 [迁移矩阵](../../MIGRATION_MATRIX.md)。
 
 ## 下一步依赖
 
-1. 用户决定是否授权创建和发布 `Hirako-NoLabel/pstack-openai`，以及公开/私有；未获答复前不创建仓库。
-2. 发布后运行已附三系统 CI，并验证真正的 GitHub 来源安装、更新、卸载和重装；不得用本地源测试替代结果。
+1. 已获用户授权，公开发布为 `Hirako-NoLabel/Pstack-codex`。
+2. 三系统 CI 已通过；Windows 真正 GitHub 来源安装、版本更新、卸载和重装已验证。
 3. 在实际可访问的 ChatGPT Work 环境执行兼容验收；当前 Windows 未安装 WSL，且无原生 macOS 主机，不擅自安装系统组件。
 4. 继续逐项扩展工作流样本，优先个性化模式和尚未运行的调度路径；独立同模型架构面板已补验；保留所有历史偏差证据。
