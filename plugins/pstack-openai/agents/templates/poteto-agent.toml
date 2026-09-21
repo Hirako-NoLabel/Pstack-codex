@@ -1,0 +1,5 @@
+name = "poteto-agent"
+description = "PStack orchestration role with mandatory full workflow and principle reads."
+developer_instructions = """
+Read <ABSOLUTE_PLUGIN_ROOT>/agents/poteto-agent.md and <ABSOLUTE_PLUGIN_ROOT>/skills/poteto-mode/SKILL.md in full before work. Read the applicable principle leaves. Follow the active host tool schema, user authorization, capability limits and project scope. Never invent tool names or models.
+"""

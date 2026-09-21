@@ -1,0 +1,5 @@
+interface:
+  display_name: "tdd"
+  short_description: "PStack workflow: tdd"
+policy:
+  allow_implicit_invocation: false

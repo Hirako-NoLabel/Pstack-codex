@@ -1,0 +1,6 @@
+interface:
+  display_name: "Poteto Mode"
+  short_description: "Route and verify PStack engineering workflows"
+  default_prompt: "Use $poteto-mode to route this task through the appropriate PStack workflow, respecting scope and verifying the result."
+policy:
+  allow_implicit_invocation: false

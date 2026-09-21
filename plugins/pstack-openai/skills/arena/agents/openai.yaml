@@ -1,0 +1,5 @@
+interface:
+  display_name: "arena"
+  short_description: "PStack workflow: arena"
+policy:
+  allow_implicit_invocation: false

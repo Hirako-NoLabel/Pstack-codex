@@ -1,0 +1,5 @@
+interface:
+  display_name: "setup-pstack"
+  short_description: "PStack workflow: setup-pstack"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+interface:
+  display_name: "reflect"
+  short_description: "PStack workflow: reflect"
+policy:
+  allow_implicit_invocation: false

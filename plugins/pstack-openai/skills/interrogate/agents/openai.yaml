@@ -1,0 +1,5 @@
+interface:
+  display_name: "interrogate"
+  short_description: "PStack workflow: interrogate"
+policy:
+  allow_implicit_invocation: false

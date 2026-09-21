@@ -1,0 +1,24 @@
+{
+  "goal": "Deduplicate overlapping same-key loader requests while preserving independent keys and retry after settlement",
+  "phase": "verified",
+  "next_action": "Parent reviews local acceptance receipts; no PR or network publication",
+  "decisions": [
+    "BUG FIX playbook with TDD",
+    "Loader-local map of pending promises; remove on fulfillment and rejection",
+    "Sequential role fallback because all four native agent slots were occupied"
+  ],
+  "evidence": [
+    "receipts/red.json: exit 1, 2 failures",
+    "receipts/green.json: exit 0, 5 passes",
+    "receipts/fix.diff",
+    "design.md"
+  ],
+  "blockers": [
+    "Independent design/review and model diversity not exercised",
+    "Remote sources and publication out of scope"
+  ],
+  "schema_version": 1,
+  "head": "74a64c2984fde9e558aeb2176a08b7ee7990188f",
+  "branch": "master",
+  "updated_at": "2026-09-21T16:57:34.255Z"
+}

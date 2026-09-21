@@ -1,0 +1,9 @@
+{
+  "name": "pstack-openai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node scripts/test-all.mjs", "validate": "node scripts/validate.mjs"},
+  "engines": {"node": ">=22"},
+  "license": "MIT"
+}

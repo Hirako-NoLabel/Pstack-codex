@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "verify-recall.mjs"
+  ],
+  "cwd": "C:\\Users\\17416\\Documents\\Codex\\2026-09-22\\goal-referenced-pasted-text-files-pasted-2\\work\\acceptance\\bug",
+  "status": 0,
+  "signal": null,
+  "time": "2026-09-21T16:58:00.694Z"
+}

@@ -1,0 +1,1 @@
+PASS: checkpoint fields, exact HEAD, local instructions, test/fix history and limited coverage restored

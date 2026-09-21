@@ -1,0 +1,28 @@
+name: Verify portable PStack
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.4.2'
+      - run: node scripts/validate.mjs
+      - run: node scripts/test-all.mjs
+      - run: bun install --frozen-lockfile
+        working-directory: plugins/pstack-openai/skills/poteto-mode/scripts
+      - run: bun test orch watch-pr
+        working-directory: plugins/pstack-openai/skills/poteto-mode/scripts
+      - run: bun run typecheck
+        working-directory: plugins/pstack-openai/skills/poteto-mode/scripts

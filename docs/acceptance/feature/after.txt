@@ -1,0 +1,14 @@
+✔ existing default remains literal case-sensitive substring search (1.5518ms)
+✔ explicit false enables ASCII and accented Unicode matching (0.3146ms)
+✔ Unicode simple folding covers sigma variants and supplementary letters (0.2744ms)
+✔ insensitive query remains literal for regular-expression punctuation (1.2609ms)
+✔ empty queries, duplicate order and input immutability are preserved (0.2641ms)
+✔ simple Unicode folding does not imply locale collation or normalization (0.2164ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.5035

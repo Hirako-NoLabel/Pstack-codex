@@ -1,0 +1,15 @@
+✔ complete plan passes without any fixed model name (187.0423ms)
+✔ missing live evidence or lanes fail the plan gate (297.2273ms)
+✔ missing perf baseline and false review gate fail (202.8999ms)
+✔ parses NUL worktree paths with spaces unicode and Windows separators (5.951ms)
+✔ preserves untracked ignored and rename paths (0.5358ms)
+✔ no unknown-use, untracked, ignored, dirty or active worktree becomes a deletion candidate (0.4961ms)
+✔ real git worktree audit is read-only and handles a space and Unicode path (1384.5594ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1579.4599

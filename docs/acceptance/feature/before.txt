@@ -1,0 +1,144 @@
+✔ existing default remains literal case-sensitive substring search (1.4657ms)
+✖ explicit false enables ASCII and accented Unicode matching (1.1998ms)
+✖ Unicode simple folding covers sigma variants and supplementary letters (1.0833ms)
+✖ insensitive query remains literal for regular-expression punctuation (0.3277ms)
+✖ empty queries, duplicate order and input immutability are preserved (0.2849ms)
+✖ simple Unicode folding does not imply locale collation or normalization (0.2656ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 1
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 91.0197
+
+✖ failing tests:
+
+test at work\acceptance\feature\search.test.mjs:12:1
+✖ explicit false enables ASCII and accented Unicode matching (1.1998ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  -   'Alpha',
+  -   'alpha',
+      'ALPHA'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/feature/search.test.mjs:13:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'ALPHA' ],
+    expected: [ 'Alpha', 'alpha', 'ALPHA' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at work\acceptance\feature\search.test.mjs:17:1
+✖ Unicode simple folding covers sigma variants and supplementary letters (1.0833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'ΟΣ',
+  -   'ος',
+  -   'οσ'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/feature/search.test.mjs:18:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'ΟΣ' ],
+    expected: [ 'ΟΣ', 'ος', 'οσ' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at work\acceptance\feature\search.test.mjs:22:1
+✖ insensitive query remains literal for regular-expression punctuation (0.3277ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      '[A]',
+  -   '[a]'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/feature/search.test.mjs:24:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ '[A]' ],
+    expected: [ '[A]', '[a]' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at work\acceptance\feature\search.test.mjs:28:1
+✖ empty queries, duplicate order and input immutability are preserved (0.2849ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'a',
+  -   'A',
+      'a'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/feature/search.test.mjs:31:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'a', 'a' ],
+    expected: [ 'a', 'A', 'a' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at work\acceptance\feature\search.test.mjs:36:1
+✖ simple Unicode folding does not imply locale collation or normalization (0.2656ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   'STRASSE'
+  - ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/feature/search.test.mjs:37:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'STRASSE' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

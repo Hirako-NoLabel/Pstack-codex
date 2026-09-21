@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: overlapping same-key requests share one fetch and result
+not ok 1 - overlapping same-key requests share one fetch and result
+  ---
+  duration_ms: 3.3282
+  type: 'test'
+  location: 'C:\\Users\\17416\\Documents\\Codex\\2026-09-22\\goal-referenced-pasted-text-files-pasted-2\\work\\acceptance\\bug\\loader.test.mjs:7:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        'alpha',
+    +   'alpha'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'alpha'
+  actual:
+    0: 'alpha'
+    1: 'alpha'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/bug/loader.test.mjs:12:9)
+    async Test.run (node:internal/test_runner/test:1113:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+  ...
+# Subtest: different keys remain independent while requests overlap
+ok 2 - different keys remain independent while requests overlap
+  ---
+  duration_ms: 0.4786
+  type: 'test'
+  ...
+# Subtest: settled success does not become a permanent cache
+ok 3 - settled success does not become a permanent cache
+  ---
+  duration_ms: 0.8868
+  type: 'test'
+  ...
+# Subtest: overlapping rejection is shared and the next request retries
+not ok 4 - overlapping rejection is shared and the next request retries
+  ---
+  duration_ms: 0.5137
+  type: 'test'
+  location: 'C:\\Users\\17416\\Documents\\Codex\\2026-09-22\\goal-referenced-pasted-text-files-pasted-2\\work\\acceptance\\bug\\loader.test.mjs:33:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        'rejected',
+    +   'fulfilled'
+    -   'rejected'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'rejected'
+    1: 'rejected'
+  actual:
+    0: 'rejected'
+    1: 'fulfilled'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/bug/loader.test.mjs:40:9)
+    async Test.run (node:internal/test_runner/test:1113:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+  ...
+# Subtest: synchronous fetcher failure is rejected and can be retried
+ok 5 - synchronous fetcher failure is rejected and can be retried
+  ---
+  duration_ms: 0.6666
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 3
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 97.2288

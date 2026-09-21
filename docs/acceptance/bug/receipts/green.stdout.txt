@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: overlapping same-key requests share one fetch and result
+ok 1 - overlapping same-key requests share one fetch and result
+  ---
+  duration_ms: 1.6581
+  type: 'test'
+  ...
+# Subtest: different keys remain independent while requests overlap
+ok 2 - different keys remain independent while requests overlap
+  ---
+  duration_ms: 0.2398
+  type: 'test'
+  ...
+# Subtest: settled success does not become a permanent cache
+ok 3 - settled success does not become a permanent cache
+  ---
+  duration_ms: 0.9253
+  type: 'test'
+  ...
+# Subtest: overlapping rejection is shared and the next request retries
+ok 4 - overlapping rejection is shared and the next request retries
+  ---
+  duration_ms: 0.3841
+  type: 'test'
+  ...
+# Subtest: synchronous fetcher failure is rejected and can be retried
+ok 5 - synchronous fetcher failure is rejected and can be retried
+  ---
+  duration_ms: 0.7231
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 91.6285
