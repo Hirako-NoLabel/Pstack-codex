@@ -1,0 +1,48 @@
+# PStack for OpenAI 交付说明
+
+这是已实现、可本地安装的候选版，尚未获准发布 GitHub。目标仓库为 `Hirako-NoLabel/pstack-openai`。
+
+## 范围和计数
+
+上游锁定到 PStack **0.15.2 / 6ed0f7a**。完整保留 **158 个原始文件**及 Lauren Tan 的 MIT 版权。
+
+按具名条目计算：**47 个主 Skills + 23 个 Playbook + 2 个 Agent 角色 + 3 个 Benny 操作 Skills = 75 项**。脚本及跨功能机制单列，避免重复计数。
+
+| 分类 | 数量 |
+|---|---:|
+| A：原生等价方案 | 29 |
+| B：替代实现 | 19 |
+| C：部分兼容 | 26 |
+| D：暂无已验证的原生等价能力 | 1 |
+| 做过实际 Agent 工作流抽样的条目 | 10 |
+| 未做完整工作流抽样执行的条目 | 65 |
+| 已证明所有目标平台完全 1:1 复刻 | 0 |
+
+这些类别是架构判断，不把“文件存在”“发现成功”或单元测试当作全面行为等价证明。
+
+## 实际通过
+
+- 官方插件校验、47/47 官方 Skill 校验、197 个插件内链接检查。
+- 全新克隆、全新隔离配置中的安装、47 技能发现、重新加载、卸载、重装。
+- PowerShell 与 Windows Git Bash 的真实本地 Git 快进更新及版本缓存核对。
+- 20 项便携脚本测试、57 项 Bun 测试、全脚本类型检查。
+- Bug Fix/TDD 实测先红后绿，修复后 5/5；Feature 实测 6/6。
+- 独立同模型评审、只读调查前后状态及文件哈希不变、Recall 状态恢复、Reflect 抽样。
+
+## 非完全兼容能力
+
+全部 26 个 C 类与 1 个 D 类条目逐项列在 [迁移矩阵](MIGRATION_MATRIX.md) 末尾；每个条目的验证状态也在表内。
+
+主要限制包括：完整聊天历史、跨模型族评审、云 VM/嵌套深度、跨重启调度、真实 UI/录屏/性能负载、PR/合并服务、Benny 外部集成。唯一 D 类是 `make-bot-ui` 的 Cursor/Grok 原生 webhook 唤醒与秘密输入卡片，保留完整需求和外部配置替代方案，未虚构 OpenAI API。
+
+原生 macOS/Linux 与 ChatGPT Work 尚未实测。Windows Git Bash 不算原生 Linux。已附三系统 CI，发布后仍需等待其真实结果。
+
+## 使用和维护
+
+- [安装、更新、卸载、重装](INSTALL.md)
+- [分平台兼容性](COMPATIBILITY.md)
+- [具体测试证据与未验证项](VERIFICATION.md)
+- [上游更新检测和审阅同步](UPSTREAM.md)
+- [完整指南](plugins/pstack-openai/docs/guide/README.md)
+
+本地安装运行 `install.ps1`，POSIX shell 使用 `sh install.sh`。安装后在新 Codex 任务中调用 `$poteto-mode`。GitHub 源安装需先获准发布仓库。没有向你的真实 Codex 配置安装测试副本，也没有激活 Benny、发送外部消息或创建 PR。

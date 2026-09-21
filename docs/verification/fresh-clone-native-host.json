@@ -1,0 +1,561 @@
+[
+  {
+    "args": [
+      "--version"
+    ],
+    "output": "codex-cli 0.155.0-alpha.9.2\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "marketplace",
+      "add",
+      "C:\\Users\\17416\\Documents\\Codex\\2026-09-22\\goal-referenced-pasted-text-files-pasted-2\\work\\fresh release 中文",
+      "--json"
+    ],
+    "output": "{\n  \"marketplaceName\": \"personal\",\n  \"installedRoot\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\fresh release 中文\",\n  \"alreadyAdded\": false\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "add",
+      "pstack-openai@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-openai@personal\",\n  \"name\": \"pstack-openai\",\n  \"marketplaceName\": \"personal\",\n  \"version\": \"0.1.0\",\n  \"installedPath\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\fresh-release-native\\\\fresh home 中文 G0zImV\\\\plugins\\\\cache\\\\personal\\\\pstack-openai\\\\0.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "list",
+      "--json"
+    ],
+    "output": "{\n  \"installed\": [\n    {\n      \"pluginId\": \"pstack-openai@personal\",\n      \"name\": \"pstack-openai\",\n      \"marketplaceName\": \"personal\",\n      \"version\": \"0.1.0\",\n      \"installed\": true,\n      \"enabled\": true,\n      \"source\": {\n        \"source\": \"local\",\n        \"path\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\fresh release 中文\\\\plugins\\\\pstack-openai\"\n      },\n      \"marketplaceSource\": {\n        \"sourceType\": \"local\",\n        \"source\": \"\\\\\\\\?\\\\C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\fresh release 中文\"\n      },\n      \"installPolicy\": \"AVAILABLE\",\n      \"authPolicy\": \"ON_INSTALL\"\n    }\n  ],\n  \"available\": []\n}\n"
+  },
+  {
+    "discovery": [
+      {
+        "name": "pstack-openai:architect",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:arena",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:automate-me",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:blast-radius",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:bro",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:create-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:figure-it-out",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:how",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:interrogate",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:maintain-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:make-bot-ui",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:no-comments",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:poteto-mode",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-attack-the-premise",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-boundary-discipline",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-build-the-lever",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-encode-lessons-in-structure",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-exhaust-the-design-space",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-experience-first",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-fix-root-causes",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-foundational-thinking",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-guard-the-context-window",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-laziness-protocol",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-make-operations-idempotent",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-migrate-callers-then-delete-legacy-apis",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-minimize-reader-load",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-model-the-domain",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-never-block-on-the-human",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-outcome-oriented-execution",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-prove-it-works",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-redesign-from-first-principles",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-separate-before-serializing-shared-state",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-sequence-verifiable-units",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-subtract-before-you-add",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-test-behavior-not-implementation",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-type-system-discipline",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:recall",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:reflect",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:setup-pstack",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:show-me-your-work",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:swarm",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:tdd",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:teach",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:technical-writing",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:typescript-best-practices",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:unslop",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:why",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "args": [
+      "plugin",
+      "marketplace",
+      "add",
+      "C:\\Users\\17416\\Documents\\Codex\\2026-09-22\\goal-referenced-pasted-text-files-pasted-2\\work\\fresh release 中文",
+      "--json"
+    ],
+    "output": "{\n  \"marketplaceName\": \"personal\",\n  \"installedRoot\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\fresh release 中文\",\n  \"alreadyAdded\": true\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "add",
+      "pstack-openai@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-openai@personal\",\n  \"name\": \"pstack-openai\",\n  \"marketplaceName\": \"personal\",\n  \"version\": \"0.1.0\",\n  \"installedPath\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\fresh-release-native\\\\fresh home 中文 G0zImV\\\\plugins\\\\cache\\\\personal\\\\pstack-openai\\\\0.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n"
+  },
+  {
+    "args": [
+      "plugin",
+      "remove",
+      "pstack-openai@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-openai@personal\",\n  \"name\": \"pstack-openai\",\n  \"marketplaceName\": \"personal\"\n}\n"
+  },
+  {
+    "discovery": [],
+    "errors": []
+  },
+  {
+    "args": [
+      "plugin",
+      "add",
+      "pstack-openai@personal",
+      "--json"
+    ],
+    "output": "{\n  \"pluginId\": \"pstack-openai@personal\",\n  \"name\": \"pstack-openai\",\n  \"marketplaceName\": \"personal\",\n  \"version\": \"0.1.0\",\n  \"installedPath\": \"C:\\\\Users\\\\17416\\\\Documents\\\\Codex\\\\2026-09-22\\\\goal-referenced-pasted-text-files-pasted-2\\\\work\\\\fresh-release-native\\\\fresh home 中文 G0zImV\\\\plugins\\\\cache\\\\personal\\\\pstack-openai\\\\0.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n"
+  },
+  {
+    "discovery": [
+      {
+        "name": "pstack-openai:architect",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:arena",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:automate-me",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:blast-radius",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:bro",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:create-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:figure-it-out",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:how",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:interrogate",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:maintain-verification-skill",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:make-bot-ui",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:no-comments",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:poteto-mode",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-attack-the-premise",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-boundary-discipline",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-build-the-lever",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-encode-lessons-in-structure",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-exhaust-the-design-space",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-experience-first",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-fix-root-causes",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-foundational-thinking",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-guard-the-context-window",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-laziness-protocol",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-make-operations-idempotent",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-migrate-callers-then-delete-legacy-apis",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-minimize-reader-load",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-model-the-domain",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-never-block-on-the-human",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-outcome-oriented-execution",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-prove-it-works",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-redesign-from-first-principles",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-separate-before-serializing-shared-state",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-sequence-verifiable-units",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-subtract-before-you-add",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-test-behavior-not-implementation",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:principle-type-system-discipline",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:recall",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:reflect",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:setup-pstack",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:show-me-your-work",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:swarm",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:tdd",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:teach",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:technical-writing",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:typescript-best-practices",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:unslop",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      },
+      {
+        "name": "pstack-openai:why",
+        "enabled": true,
+        "pluginId": "pstack-openai@personal"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "result": "PASS",
+    "skill_count": 47,
+    "scope": "Fresh CODEX_HOME, real CLI and skills/list; local-source upgrade, not remote GitHub fetch or model workflow execution."
+  }
+]
