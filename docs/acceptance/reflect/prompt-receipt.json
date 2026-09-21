@@ -1,0 +1,17 @@
+[
+  {
+    "lens": "judgment",
+    "template_sha256": "a78576ea397ff09142e343afbf00509c90b90fcd14d0f582a9ccfa694b77556c",
+    "prompt_sha256": "f0f3d68b3d0418bd825c970d234e4b28cf8a4c731a3fc0581b4553c881ca9901"
+  },
+  {
+    "lens": "tooling",
+    "template_sha256": "1860afd2f74adeb80b919723afa684b1b3d2e6915bcaadaf55d7c11225789141",
+    "prompt_sha256": "6b104cf926176978f4c8fac7243903be9daf3e95fa43f0a694c1feb4b23231f8"
+  },
+  {
+    "lens": "divergent",
+    "template_sha256": "1bb6d33c954017a039c85cfdfe0ad775b9339e9ac79d7807832cec3f57ecc5ae",
+    "prompt_sha256": "4f7fd98d853de92799da9299e14f5ccc62970e8ac7212c9d3612815f1a74e83f"
+  }
+]

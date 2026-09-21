@@ -27,7 +27,7 @@
 - PowerShell 与 Windows Git Bash 的真实本地 Git 快进更新及版本缓存核对。
 - 20 项便携脚本测试、57 项 Bun 测试、全脚本类型检查。
 - Bug Fix/TDD 实测先红后绿，修复后 5/5；Feature 实测 6/6。
-- 独立同模型评审、只读调查前后状态及文件哈希不变、Recall 状态恢复、Reflect 抽样。
+- 独立同模型评审、只读调查前后状态及文件哈希不变、Recall 状态恢复、Reflect 三并行镜头及独立汇总抽样。
 
 ## 非完全兼容能力
 
@@ -42,6 +42,8 @@
 - [安装、更新、卸载、重装](INSTALL.md)
 - [分平台兼容性](COMPATIBILITY.md)
 - [具体测试证据与未验证项](VERIFICATION.md)
+- [原始需求逐项验收](docs/acceptance/requirements-audit.md)
+- [Reflect 完整待审提案](docs/acceptance/reflect/synthesis.md)
 - [上游更新检测和审阅同步](UPSTREAM.md)
 - [完整指南](plugins/pstack-openai/docs/guide/README.md)
 

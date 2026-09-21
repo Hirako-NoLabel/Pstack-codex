@@ -501,7 +501,7 @@
       "cursor": "Cursor skill instructions and host-specific tools where referenced",
       "codex": "Conditional native tools with explicit coverage gaps",
       "work": "Documented skill-capable host; this workflow not live-tested",
-      "migration": "Preserve three review lenses and approval before rule changes. Acceptance ran sequential lenses; full independent reflection panel remains untested.",
+      "migration": "Preserve three review lenses and approval before rule changes. Acceptance ran three parallel native reviewers plus separate synthesizer using exact templates and a labelled digest; same model, no durable edits applied.",
       "validation": "Sampled runtime acceptance; limitations in VERIFICATION.md"
     },
     {

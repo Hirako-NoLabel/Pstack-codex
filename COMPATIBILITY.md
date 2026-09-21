@@ -23,7 +23,7 @@ Status applies to this port's evidence, not every possible account. **Supported*
 | Git worktree isolation and audit | Supported | Untested | Unsupported | Real worktree and read-only audit with spaces/Chinese paths. Deletion never automatic; active-use unknown holds candidate. |
 | macOS simulator / Cursor cache cleanup | Untested | Untested | Unsupported | Retained optional capability for explicitly named installed targets; not translated into deleting Codex state. |
 | Recall and context restoration | Partial | Untested | Partial | Actual Git/AGENTS/checkpoint save/recall. Full chat corpus may be unavailable; no unrelated history scan. |
-| Reflect | Partial | Untested | Partial | Actual sequential three-lens reflection; explicit permission for durable rule edits; full independent panel untested. |
+| Reflect | Partial | Untested | Partial | Actual three parallel review lenses plus separate synthesizer; same inherited model and labelled evidence digest. Rule-edit approval gate preserved; proposals not applied. |
 | Automate-me / personal mode composition | Partial | Untested | Partial | Full evidence/interview/incremental workflow retained; complete history unavailable and no personal-mode end-to-end run. |
 | Persistent orchestration store / ledger | Supported | Untested | Unsupported | Bun tests cover unit/inbox/gates/standing/status/lock/ledger and replacement frontier fixtures. Live GitHub frontier untested. |
 | Long-running active session | Partial | Untested | Unsupported | Checkpoints and exit predicates implemented. Duration/host limits and user authorization still apply. |

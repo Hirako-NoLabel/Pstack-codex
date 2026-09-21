@@ -10,7 +10,7 @@ const sampled=new Set(['poteto-mode','tdd','how','architect','interrogate','reca
 const skillNotes={
  'make-bot-ui':'Native Cursor/Grok routine wake and secret card have no verified OpenAI equivalent. Complete UI/server flow retained for an explicitly configured external endpoint; native wake remains D.',
  'recall':'Use scoped native history when exposed, otherwise Git + AGENTS + handoff + checkpoint. Complete chat-history access cannot be guaranteed.',
- 'reflect':'Preserve three review lenses and approval before rule changes. Acceptance ran sequential lenses; full independent reflection panel remains untested.',
+ 'reflect':'Preserve three review lenses and approval before rule changes. Acceptance ran three parallel native reviewers plus separate synthesizer using exact templates and a labelled digest; same model, no durable edits applied.',
  'automate-me':'Preserve evidence-mining/interview/incremental personal-mode flow. Restricted history reduces mining coverage; no full personalization acceptance run.',
  'architect':'Preserve usage-first independent designs and synthesis. Same-model roles can replace unavailable cross-family panels; full parallel design panel untested.',
  'arena':'Preserve same brief, isolated candidates, hidden rubric, base/graft and cross-judge. Cross-model diversity and cloud isolation conditional.',

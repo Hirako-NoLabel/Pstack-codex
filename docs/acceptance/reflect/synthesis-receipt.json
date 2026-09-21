@@ -1,0 +1,16 @@
+{
+  "template_sha256": "49c68c050293f84ca1171459ff10ec26d23d9ef1ca8a68e2287c3ae155fff94e",
+  "prompt_sha256": "06637b24934230ca820ceef5cbf1d5af6a42b4d0b1c41635bcb59ea7b26fcecd",
+  "exact_substitution": true,
+  "reviewer_agents": [
+    "/root/audit_skills",
+    "/root/audit_automation",
+    "/root/audit_playbooks"
+  ],
+  "synthesizer_agent": "/root/reflect_synthesis",
+  "model_policy": "inherit-parent",
+  "cross_model": false,
+  "evidence_source": "labelled digest",
+  "rule_edits_applied": 0,
+  "external_items_created": 0
+}
