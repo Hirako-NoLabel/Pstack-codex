@@ -6,7 +6,7 @@ Install the plugin, configure supported roles, and run one small verified task.
 
 ## Install the plugin
 
-Follow the repository [installation guide](../../../../INSTALL.md). The distribution contains a native plugin at `plugins/pstack-openai`; the repository scripts install through the host's supported marketplace mechanism (marketplace name `personal`). Restart or refresh the host as the installer instructs, then verify that `$poteto-mode` is discoverable in a fresh task. A file copied to disk is not proof of discovery.
+Follow the repository [installation guide](../../../../INSTALL.md). The distribution contains a native plugin at `plugins/pstack-codex`; the repository scripts install through the host's supported marketplace mechanism (marketplace name `personal`). Restart or refresh the host as the installer instructs, then verify that `$poteto-mode` is discoverable in a fresh task. A file copied to disk is not proof of discovery.
 
 ## Configure roles
 

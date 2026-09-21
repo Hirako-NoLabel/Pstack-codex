@@ -21,8 +21,8 @@ jobs:
       - run: node scripts/validate.mjs
       - run: node scripts/test-all.mjs
       - run: bun install --frozen-lockfile
-        working-directory: plugins/pstack-openai/skills/poteto-mode/scripts
+        working-directory: plugins/pstack-codex/skills/poteto-mode/scripts
       - run: bun test orch watch-pr
-        working-directory: plugins/pstack-openai/skills/poteto-mode/scripts
+        working-directory: plugins/pstack-codex/skills/poteto-mode/scripts
       - run: bun run typecheck
-        working-directory: plugins/pstack-openai/skills/poteto-mode/scripts
+        working-directory: plugins/pstack-codex/skills/poteto-mode/scripts

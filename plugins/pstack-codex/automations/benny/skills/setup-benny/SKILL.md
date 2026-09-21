@@ -30,7 +30,7 @@ Merge the entire source pack into the destination:
 
 If this file is already being read from the target destination, treat the copy as complete and run the same verification before continuing.
 
-Install PStack for OpenAI using the repository's supported installer and verify the plugin in a fresh task rooted at the target repository. See the [installation guide](../../../../../../INSTALL.md) when reading this source pack; copied packs must use the installation guide from their distribution. Do not write Cursor settings or assume a project plugin settings schema exists. Project-scoped discovery must be verified with the current host. If only user-scoped installation is available, record that limitation and do not claim the project-scoped prerequisite passed.
+Install Pstack-codex using the repository's supported installer and verify the plugin in a fresh task rooted at the target repository. See the [installation guide](../../../../../../INSTALL.md) when reading this source pack; copied packs must use the installation guide from their distribution. Do not write Cursor settings or assume a project plugin settings schema exists. Project-scoped discovery must be verified with the current host. If only user-scoped installation is available, record that limitation and do not claim the project-scoped prerequisite passed.
 
 Reload the target project or start a fresh agent rooted there. Verify that these shared pstack skills resolve from project scope:
 

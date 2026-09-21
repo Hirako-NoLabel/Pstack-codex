@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@pstack-openai/poteto-mode-tools",
+      "name": "@pstack-codex/poteto-mode-tools",
       "dependencies": {
         "commander": "14.0.0",
       },

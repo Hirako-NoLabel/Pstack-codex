@@ -1,6 +1,6 @@
-# Install PStack for OpenAI
+# Install Pstack-codex
 
-Codex is the primary target. This repository uses the official repository marketplace layout: `.agents/plugins/marketplace.json` points to `plugins/pstack-openai`, whose compatibility manifest declares all bundled skills. Do not copy dozens of directories manually.
+Codex is the primary target. This repository uses the official repository marketplace layout: `.agents/plugins/marketplace.json` points to `plugins/pstack-codex`, whose compatibility manifest declares all bundled skills. Do not copy dozens of directories manually.
 
 ## Requirements
 
@@ -11,8 +11,8 @@ Install Codex with plugin marketplace and plugin add/remove support, plus Git. T
 These commands become usable once the repository is published. Until then use the local checkout below.
 
 ```sh
-codex plugin marketplace add Hirako-NoLabel/pstack-openai --ref main
-codex plugin add pstack-openai@personal
+codex plugin marketplace add Hirako-NoLabel/Pstack-codex --ref main
+codex plugin add pstack-codex@personal
 ```
 
 The generated marketplace identifier is `personal`. If a different configured source already uses that name, stop rather than replacing it. Use the official plugin-creator to generate a distinct catalog name and update the selector consistently. The installer does not edit an existing personal marketplace file.
@@ -20,16 +20,16 @@ The generated marketplace identifier is `personal`. If a different configured so
 ## From a checkout, Windows
 
 ```powershell
-git clone https://github.com/Hirako-NoLabel/pstack-openai.git
-cd pstack-openai
+git clone https://github.com/Hirako-NoLabel/Pstack-codex.git
+cd Pstack-codex
 ./install.ps1
 ```
 
 ## From a checkout, macOS/Linux
 
 ```sh
-git clone https://github.com/Hirako-NoLabel/pstack-openai.git
-cd pstack-openai
+git clone https://github.com/Hirako-NoLabel/Pstack-codex.git
+cd Pstack-codex
 sh ./install.sh
 ```
 
@@ -38,7 +38,7 @@ Both scripts use official Codex commands and stop on errors. An optional first a
 ## Optional executable tools
 
 ```sh
-cd plugins/pstack-openai/skills/poteto-mode/scripts
+cd plugins/pstack-codex/skills/poteto-mode/scripts
 bun install --frozen-lockfile
 bun test orch watch-pr
 ```
@@ -51,7 +51,7 @@ For a GitHub marketplace installation:
 
 ```sh
 codex plugin marketplace upgrade personal
-codex plugin add pstack-openai@personal
+codex plugin add pstack-codex@personal
 ```
 
 For a local checkout use `./update.ps1` or `sh ./update.sh`. This requires a clean tracked working tree and performs a fast-forward-only pull before reinstalling. Keep personal configuration in the target project's `.pstack/config.json`, not the plugin cache. Never edit the managed cache as your source of truth. Restart the task to pick up updated instructions.
@@ -59,8 +59,8 @@ For a local checkout use `./update.ps1` or `sh ./update.sh`. This requires a cle
 ## Uninstall and reinstall
 
 ```sh
-codex plugin remove pstack-openai@personal
-codex plugin add pstack-openai@personal
+codex plugin remove pstack-codex@personal
+codex plugin add pstack-codex@personal
 ```
 
 Equivalent uninstall.ps1/uninstall.sh wrappers are included. Uninstall removes the managed plugin, not your project checkpoints, personalized mode or repository clone. Remove the marketplace separately with `codex plugin marketplace remove personal` only if it is the intended source and no longer needed. Do not remove an unrelated source.

@@ -1,2 +1,2 @@
-& codex plugin remove 'pstack-openai@personal'
+& codex plugin remove 'pstack-codex@personal'
 exit $LASTEXITCODE

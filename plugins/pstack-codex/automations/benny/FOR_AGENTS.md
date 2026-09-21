@@ -64,7 +64,7 @@ the human enters setup by pointing the OpenAI host at this file. do not look for
 6. verify that the copied `FOR_AGENTS.md` and `skills/setup-benny/SKILL.md` exist in the target repository.
 7. read and follow `.pstack/automations/benny/skills/setup-benny/SKILL.md` directly from the target repository.
 
-Install PStack for OpenAI through its documented installer and verify shared dependencies in a fresh target-repository task. Do not create a Cursor settings file or add Benny's operational files to the normal plugin skills root. Project-scoped discovery is a readiness requirement: if unavailable, explain the gap instead of counting user-scoped discovery as equivalent.
+Install Pstack-codex through its documented installer and verify shared dependencies in a fresh target-repository task. Do not create a Cursor settings file or add Benny's operational files to the normal plugin skills root. Project-scoped discovery is a readiness requirement: if unavailable, explain the gap instead of counting user-scoped discovery as equivalent.
 
 Commit the copied pack and secret-free configuration before a live automation reads it. Do not commit secrets. Do not activate, create or update a live automation unless the user explicitly asks.
 

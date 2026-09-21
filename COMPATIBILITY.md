@@ -5,7 +5,7 @@ Status applies to this port's evidence, not every possible account. **Supported*
 | Capability | Codex (Windows tested) | ChatGPT Work | Ordinary Chat | Evidence / boundary |
 |---|---|---|---|---|
 | Official plugin package and 47-skill discovery | Supported | Untested | Untested | Real CLI install and app-server skills/list. Official docs describe plugin skills across Chat/Work; no live Work/Chat install performed. |
-| GitHub repository marketplace installation | Partial | Untested | Untested | Local-source lifecycle verified. Remote publication/install awaits owner approval. Local marketplaces differ from public directory listings. |
+| GitHub repository marketplace installation | Partial | Untested | Untested | Local-source lifecycle verified. Public publication is authorized; upload and remote installation verification are pending. Local marketplaces differ from public directory listings. |
 | Poteto task dispatch | Supported | Untested | Untested | Bug/feature/how-investigation fixtures; all 23 route instructions retained, not all exercised. |
 | Sticky mode across conversation turns | Partial | Untested | Untested | Explicit conversation instruction replaces Cursor mode metadata; no platform-enforced sticky flag or automatic fresh-session activation. |
 | Bug Fix + cheap-path TDD | Supported | Untested | Partial | Core rerun preserves sync contracts, has committed pre-work phases, native investigation/fix/review and 8 passing checks. Swarm leaf timing limitation retained. Chat needs executable tools for proof. |

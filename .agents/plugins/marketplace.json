@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "pstack-openai",
+      "name": "pstack-codex",
       "source": {
         "source": "local",
-        "path": "./plugins/pstack-openai"
+        "path": "./plugins/pstack-codex"
       },
       "policy": {
         "installation": "AVAILABLE",

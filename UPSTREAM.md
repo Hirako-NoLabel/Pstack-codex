@@ -3,10 +3,10 @@
 - Upstream: [cursor/plugins/pstack](https://github.com/cursor/plugins/tree/main/pstack).
 - Audited commit: `6ed0f7a9504f577d7529064103cecce9be7dfc5e`.
 - Upstream manifest version: `0.15.2`.
-- Intended OpenAI repository: `Hirako-NoLabel/pstack-openai` (publication status in VERIFICATION.md).
+- Intended OpenAI repository: `Hirako-NoLabel/Pstack-codex` (publication status in VERIFICATION.md).
 - Original author and copyright: Lauren Tan, 2026. Original MIT LICENSE is preserved unchanged.
 
-`upstream/pstack` retains every original file, including Cursor metadata, agents, dormant automation, scripts, tests and images. It is a reference snapshot, not the installed plugin. `upstream.lock.json` records each SHA-256 hash. The installable derivative is `plugins/pstack-openai`. Source snapshots retain historical Cursor instructions; never execute them as current OpenAI instructions.
+`upstream/pstack` retains every original file, including Cursor metadata, agents, dormant automation, scripts, tests and images. It is a reference snapshot, not the installed plugin. `upstream.lock.json` records each SHA-256 hash. The installable derivative is `plugins/pstack-codex`. Source snapshots retain historical Cursor instructions; never execute them as current OpenAI instructions.
 
 ## Detect updates
 

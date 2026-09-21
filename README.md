@@ -1,4 +1,4 @@
-# PStack for OpenAI
+# Pstack-codex
 
 A high-fidelity adaptation of [Lauren Tan's PStack](https://github.com/cursor/plugins/tree/main/pstack) for Codex, with explicitly qualified ChatGPT Work support. This is an independent derivative, not an official OpenAI or Cursor product.
 
@@ -21,13 +21,13 @@ Poteto routes the request to the appropriate playbook, records its steps, invest
 - Arena, swarm, role-based review panels, worktree isolation, persistent orchestration records, SHA-bound verification, PR status watcher, autonomous and multi-phase playbooks.
 - Portable project context, source-integrity/update tooling, install/update/uninstall wrappers and offline protocol tests for Benny.
 
-See [the complete guide](plugins/pstack-openai/docs/guide/README.md), [migration matrix](MIGRATION_MATRIX.md), [compatibility](COMPATIBILITY.md) and [verification evidence](VERIFICATION.md). Unsupported native bot wake behavior and untested live integrations remain visible. No claim of full ChatGPT Work compatibility is made.
+See [the complete guide](plugins/pstack-codex/docs/guide/README.md), [migration matrix](MIGRATION_MATRIX.md), [compatibility](COMPATIBILITY.md) and [verification evidence](VERIFICATION.md). Unsupported native bot wake behavior and untested live integrations remain visible. No claim of full ChatGPT Work compatibility is made.
 
 ## Layout
 
 ```text
 .agents/plugins/marketplace.json   official repository marketplace
-plugins/pstack-openai/             installed plugin and all runtime resources
+plugins/pstack-codex/             installed plugin and all runtime resources
 upstream/pstack/                   immutable original reference snapshot
 docs/audit/                       full source audit
 scripts/                          integrity, validation and upstream review

@@ -29,10 +29,10 @@ function runner(record,env){return (command,args,cwd)=>{
  if(r.error||r.status!==0)throw new Error(`${path.basename(command)} exited ${r.status}: ${(r.stderr||r.error?.message||'').slice(-1800)}`);
  return r.stdout;
 };}
-function expectedVersion(repo){return JSON.parse(fs.readFileSync(path.join(repo,'plugins/pstack-openai/.codex-plugin/plugin.json'),'utf8')).version;}
+function expectedVersion(repo){return JSON.parse(fs.readFileSync(path.join(repo,'plugins/pstack-codex/.codex-plugin/plugin.json'),'utf8')).version;}
 function installed(run,cwd,expected){
  const data=JSON.parse(run(codex,['plugin','list','--json'],cwd));
- const item=data.installed.find(x=>x.pluginId==='pstack-openai@personal'&&x.installed&&x.enabled);
+ const item=data.installed.find(x=>x.pluginId==='pstack-codex@personal'&&x.installed&&x.enabled);
  if(expected===null){assert.equal(item,undefined);return;}
  assert.ok(item,'plugin missing or disabled');assert.equal(item.version,expected);
 }
@@ -57,13 +57,13 @@ for(const shell of (selection?[selection]:['powershell','git-bash'])){
  if(!fs.existsSync(path.join(clone,'.git')))continue;
  stage('install',()=>{wrap('install');installed(run,clone,record.initialVersion);});
  stage('source-version-commit',()=>{
-  const manifest=path.join(source,'plugins/pstack-openai/.codex-plugin/plugin.json');const value=JSON.parse(fs.readFileSync(manifest,'utf8'));const parts=value.version.split('.').map(Number);assert.ok(parts.length===3&&parts.every(Number.isSafeInteger));parts[2]++;value.version=parts.join('.');record.updatedVersion=value.version;
-  fs.writeFileSync(manifest,JSON.stringify(value,null,2)+'\n');fs.writeFileSync(path.join(source,'plugins/pstack-openai/wrapper-acceptance.txt'),value.version+'\n');
-  run('git',['add','plugins/pstack-openai/.codex-plugin/plugin.json','plugins/pstack-openai/wrapper-acceptance.txt'],source);run('git',['commit','-m','local version update'],source);record.updatedHead=run('git',['rev-parse','HEAD'],source).trim();
+  const manifest=path.join(source,'plugins/pstack-codex/.codex-plugin/plugin.json');const value=JSON.parse(fs.readFileSync(manifest,'utf8'));const parts=value.version.split('.').map(Number);assert.ok(parts.length===3&&parts.every(Number.isSafeInteger));parts[2]++;value.version=parts.join('.');record.updatedVersion=value.version;
+  fs.writeFileSync(manifest,JSON.stringify(value,null,2)+'\n');fs.writeFileSync(path.join(source,'plugins/pstack-codex/wrapper-acceptance.txt'),value.version+'\n');
+  run('git',['add','plugins/pstack-codex/.codex-plugin/plugin.json','plugins/pstack-codex/wrapper-acceptance.txt'],source);run('git',['commit','-m','local version update'],source);record.updatedHead=run('git',['rev-parse','HEAD'],source).trim();
  });
  stage('update-fast-forward-and-installed-version',()=>{
   wrap('update');assert.equal(run('git',['rev-parse','HEAD'],clone).trim(),record.updatedHead);run('git',['merge-base','--is-ancestor',record.baselineHead,record.updatedHead],clone);installed(run,clone,record.updatedVersion);
-  const cache=path.join(home,'plugins/cache/personal/pstack-openai',record.updatedVersion,'wrapper-acceptance.txt');assert.equal(fs.readFileSync(cache,'utf8').trim(),record.updatedVersion);
+  const cache=path.join(home,'plugins/cache/personal/pstack-codex',record.updatedVersion,'wrapper-acceptance.txt');assert.equal(fs.readFileSync(cache,'utf8').trim(),record.updatedVersion);
  });
  stage('uninstall',()=>{wrap('uninstall');installed(run,clone,null);});
  stage('reinstall',()=>{wrap('install');installed(run,clone,expectedVersion(clone));});

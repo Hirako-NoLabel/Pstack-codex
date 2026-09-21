@@ -1,6 +1,6 @@
-# PStack for OpenAI 交付说明
+# Pstack-codex 交付说明
 
-这是已实现、可本地安装的候选版，尚未获准发布 GitHub。目标仓库为 `Hirako-NoLabel/pstack-openai`。
+这是已实现、可本地安装的候选版，已获用户授权公开发布 GitHub，正在准备上传。目标仓库为 `Hirako-NoLabel/Pstack-codex`。
 
 ## 范围和计数
 
@@ -46,6 +46,6 @@
 - [原始需求逐项验收](docs/acceptance/requirements-audit.md)
 - [Reflect 完整待审提案](docs/acceptance/reflect/synthesis.md)
 - [上游更新检测和审阅同步](UPSTREAM.md)
-- [完整指南](plugins/pstack-openai/docs/guide/README.md)
+- [完整指南](plugins/pstack-codex/docs/guide/README.md)
 
 本地安装运行 `install.ps1`，POSIX shell 使用 `sh install.sh`。安装后在新 Codex 任务中调用 `$poteto-mode`。GitHub 源安装需先获准发布仓库。没有向你的真实 Codex 配置安装测试副本，也没有激活 Benny、发送外部消息或创建 PR。

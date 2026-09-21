@@ -34,7 +34,7 @@ async function discover() {
     child.stdin.write(JSON.stringify({method:'initialized'})+'\n');
     const result=await call('skills/list',{cwds:[root],forceReload:true});
     const entry=result.data.find(v=>path.resolve(v.cwd)===root) || result.data[0];
-    const skills=entry.skills.filter(v=>v.pluginId?.startsWith('pstack-openai@') || v.path.includes('pstack-openai'));
+    const skills=entry.skills.filter(v=>v.pluginId?.startsWith('pstack-codex@') || v.path.includes('pstack-codex'));
     evidence.push({discovery:skills.map(v=>({name:v.name,enabled:v.enabled,pluginId:v.pluginId})),errors:entry.errors});
     return skills;
   } finally {clearTimeout(timer);lines.close();child.kill();}
@@ -42,16 +42,16 @@ async function discover() {
 try {
   run(['--version']);
   run(['plugin','marketplace','add',source,...(githubSource?['--ref','main']:[]),'--json']);
-  run(['plugin','add','pstack-openai@personal','--json']);
+  run(['plugin','add','pstack-codex@personal','--json']);
   run(['plugin','list','--json']);
-  const expected=fs.readdirSync(path.join(root,'plugins/pstack-openai/skills')).filter(n=>fs.existsSync(path.join(root,'plugins/pstack-openai/skills',n,'SKILL.md'))).sort();
-  assert.deepEqual((await discover()).filter(v=>v.enabled).map(v=>v.name.replace(/^pstack-openai:/,'')).sort(),expected);
+  const expected=fs.readdirSync(path.join(root,'plugins/pstack-codex/skills')).filter(n=>fs.existsSync(path.join(root,'plugins/pstack-codex/skills',n,'SKILL.md'))).sort();
+  assert.deepEqual((await discover()).filter(v=>v.enabled).map(v=>v.name.replace(/^pstack-codex:/,'')).sort(),expected);
   if(githubSource)run(['plugin','marketplace','upgrade','personal','--json']);
   else run(['plugin','marketplace','add',root,'--json']);
-  run(['plugin','add','pstack-openai@personal','--json']);
-  run(['plugin','remove','pstack-openai@personal','--json']);
+  run(['plugin','add','pstack-codex@personal','--json']);
+  run(['plugin','remove','pstack-codex@personal','--json']);
   assert.equal((await discover()).filter(v=>v.enabled).length,0);
-  run(['plugin','add','pstack-openai@personal','--json']);
+  run(['plugin','add','pstack-codex@personal','--json']);
   assert.equal((await discover()).filter(v=>v.enabled).length,expected.length);
   evidence.push({result:'PASS',skill_count:expected.length,source,scope:githubSource
     ? 'Fresh CODEX_HOME, real GitHub marketplace fetch/refresh and skills/list lifecycle. Refresh without a source change does not prove a version-changing update; no model workflow execution.'

@@ -10,5 +10,5 @@ if ($LASTEXITCODE -ne 0) { throw 'Staged edits present; review before updating.'
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & codex plugin marketplace add $PSScriptRoot
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-& codex plugin add 'pstack-openai@personal'
+& codex plugin add 'pstack-codex@personal'
 exit $LASTEXITCODE

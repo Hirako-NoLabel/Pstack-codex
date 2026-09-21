@@ -8,4 +8,4 @@ git -C "$root" diff --quiet || { echo 'Local edits present; review before updati
 git -C "$root" diff --cached --quiet || { echo 'Staged edits present; review before updating.' >&2; exit 1; }
 git -C "$root" pull --ff-only
 codex plugin marketplace add "$root"
-codex plugin add pstack-openai@personal
+codex plugin add pstack-codex@personal

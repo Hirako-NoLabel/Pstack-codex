@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {snapshot, checkpoint} from '../plugins/pstack-openai/scripts/context.mjs';
+import {snapshot, checkpoint} from '../plugins/pstack-codex/scripts/context.mjs';
 import {inventory, compare} from '../scripts/upstream.mjs';
 
 test('checkpoint survives a fresh read and exposes stale commit claims with Chinese and spaced paths', t => {

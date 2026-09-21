@@ -1,16 +1,16 @@
 {
-  "name": "pstack-openai",
+  "name": "pstack-codex",
   "version": "0.1.0",
   "description": "High-fidelity OpenAI adaptation of Lauren Tan’s PStack engineering workflows.",
   "author": {
-    "name": "PStack OpenAI contributors; upstream Lauren Tan"
+    "name": "Pstack-codex contributors; upstream Lauren Tan"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "PStack for OpenAI",
+    "displayName": "Pstack-codex",
     "shortDescription": "Evidence-led engineering workflows for Codex.",
     "longDescription": "47 skills, 23 playbooks, native role orchestration, persistent context and explicit platform compatibility.",
-    "developerName": "PStack OpenAI contributors",
+    "developerName": "Pstack-codex contributors",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
@@ -18,5 +18,5 @@
     ]
   },
   "license": "MIT",
-  "repository": "https://github.com/Hirako-NoLabel/pstack-openai"
+  "repository": "https://github.com/Hirako-NoLabel/Pstack-codex"
 }

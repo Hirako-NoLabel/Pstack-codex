@@ -1,6 +1,6 @@
 # Verification report
 
-Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node **24.12.0**, Bun **1.4.2**. This is a tested release candidate, not certified 1:1 parity across all platforms. GitHub publication has not been authorized yet.
+Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node **24.12.0**, Bun **1.4.2**. This is a tested release candidate, not certified 1:1 parity across all platforms. Public GitHub publication has been authorized by the owner; upload is pending.
 
 ## Results
 
@@ -37,7 +37,7 @@ node --test docs/acceptance/bug/loader.test.mjs
 node --test docs/acceptance/feature/search.test.mjs
 ```
 
-In `plugins/pstack-openai/skills/poteto-mode/scripts`:
+In `plugins/pstack-codex/skills/poteto-mode/scripts`:
 
 ```sh
 bun install --frozen-lockfile
@@ -57,7 +57,7 @@ The native tests isolate CODEX_HOME, not the user's real installed plugins. Wrap
 After authorized publication, verify the actual remote source with:
 
 ```sh
-node scripts/test-native-host.mjs /absolute/path/to/codex /temporary/github-evidence Hirako-NoLabel/pstack-openai
+node scripts/test-native-host.mjs /absolute/path/to/codex /temporary/github-evidence Hirako-NoLabel/Pstack-codex
 ```
 
 The optional fourth argument uses a GitHub marketplace on `main`, its Git refresh command, and the same isolated discovery/remove/reinstall checks. This remote branch has not run yet. An unchanged-source refresh does not prove a version-changing update; that still requires a published source change and installed-cache readback. The default local-source lifecycle was rerun successfully after adding this option (47 skills); see `docs/verification/native-host-source-option.json`.
@@ -83,3 +83,9 @@ All 75 named source entries were audited and packaged. **12 entries received sam
 Initial sample-run deviations are retained in the acceptance reports: the Bug Fix worker did not copy the todo steps before execution; architecture/reflection initially used sequential lenses under occupied slots. These are evidence of sampled workflow limitations, not reasons to label the port fully equivalent. Subsequent independent read-only review substantiated fixture correctness, not perfect compliance with every instruction.
 
 Evidence is under `docs/verification` and `docs/acceptance`. Audit/implementation reports are historical receipts; where they name an initial failure or subsequently corrected text, this report and the final source describe the current result.
+
+## Pstack-codex naming verification
+
+The current project display name is Pstack-codex, the installable identifier is `pstack-codex@personal`, and the canonical repository is https://github.com/Hirako-NoLabel/Pstack-codex. Historical receipts under docs/acceptance, docs/verification and docs/audit retain their original names and paths as recorded evidence.
+
+After renaming, the official plugin validator passed, repository validation passed (47 skills, 23 playbooks, 158 unchanged upstream files and 197 links), all 50 standard tests passed, and an actual isolated Codex CLI install/discover/reload/remove/reinstall cycle passed with 47 skills. Public publication is authorized; remote upload and remote-source verification are pending.
