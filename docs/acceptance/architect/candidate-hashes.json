@@ -1,0 +1,78 @@
+[
+  {
+    "path": "candidate-1/loading-cache.sketch.ts",
+    "sha256": "3cc9bfb4ef4ccb411ee465bfa2f0dd944f3ae51ba4728ada3da9fa98a35e34fb"
+  },
+  {
+    "path": "candidate-1/module-map.md",
+    "sha256": "09a756b2a7d57994dd7f5ad853d3945d05db159b6db225888e1a6062b8c9e32b"
+  },
+  {
+    "path": "candidate-1/phases.md",
+    "sha256": "8698dc1de0c16876744eb7b84cba4023723c033a8eb7f008bd2a4b22fe7d9e6a"
+  },
+  {
+    "path": "candidate-1/rationale.md",
+    "sha256": "2b9739658996c96e5780a5465e2fc69e79045699cea3b23b46cc478396520b82"
+  },
+  {
+    "path": "candidate-1/usage.md",
+    "sha256": "c9bf1a8caa5544ef082001ce4370afc6c05ccf04100750847e84508fc0c0a5bf"
+  },
+  {
+    "path": "candidate-2/evidence.md",
+    "sha256": "3f6d5011f0e8208a9985ca6629e928a2917b6248cab0d309a81f3c208650a0fc"
+  },
+  {
+    "path": "candidate-2/loading-cache.sketch.ts",
+    "sha256": "ad05a4c7c1d76358e5381fc07de5ba7ac7ba565fbb07cfe0e8f665310fcf638a"
+  },
+  {
+    "path": "candidate-2/module-map.md",
+    "sha256": "63720f5dd13ab0d1b042e06529ceb44490bf2db2c1425902a4bf61adcf4dbc3b"
+  },
+  {
+    "path": "candidate-2/rationale.md",
+    "sha256": "47aba60af20d830d50f59a1d3d213bccc0e591cd261dfb0ead94737eb0b96acf"
+  },
+  {
+    "path": "candidate-2/usage.md",
+    "sha256": "06e58c4a1702e7ff04f8ee2789274c52df99641a57e1367e12e41887b56cfcc5"
+  },
+  {
+    "path": "candidate-3/evidence.md",
+    "sha256": "ac88c248393f3f0647a8c0fadb0e9dd3ed92c067b91ae6d47b9e8dd7374403d5"
+  },
+  {
+    "path": "candidate-3/loading-cache.sketch.ts",
+    "sha256": "4269792bfede48f09cbc83862327851cc1602876fb0f346ecc54712cb57353f8"
+  },
+  {
+    "path": "candidate-3/module-map.md",
+    "sha256": "b4130d1ef0811467414ae5691d3742b06e55743ad892cb403d5fc9909a40141f"
+  },
+  {
+    "path": "candidate-3/rationale.md",
+    "sha256": "937b0a1d4db6da581151f6f07ccb4464666e07aeea80377a7f0bfb90aa5320d2"
+  },
+  {
+    "path": "candidate-4/loading-cache.sketch.ts",
+    "sha256": "930b9650ec873f9f48ff39a33c781670803c7c6aa2095e5e454707bdd96d99d5"
+  },
+  {
+    "path": "candidate-4/module-map.md",
+    "sha256": "57efc236ac9627e050f8e511c1cbc32d9990c42f235a83d1f56b2f12efce0802"
+  },
+  {
+    "path": "candidate-4/rationale.md",
+    "sha256": "b0a00adc2f05662f0b71781a47f0eb9d5ce2b1d3d9b0f489339957da4daf521e"
+  },
+  {
+    "path": "candidate-4/todo.md",
+    "sha256": "1fafddb5701609219305c4a95c0e3f207a955aa1a7849d56a09c0d203143d80d"
+  },
+  {
+    "path": "candidate-4/usage.md",
+    "sha256": "3fda4c26875b04358550c6dd45f3692957b40681397aac41a1b07386800b59bf"
+  }
+]

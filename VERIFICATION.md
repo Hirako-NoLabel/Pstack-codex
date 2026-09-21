@@ -21,7 +21,7 @@ Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node *
 | Feature | Pass on sample | Default literal search retained; optional Unicode-insensitive search: baseline 5 failures, fixed 6/6. Actual design comparison included. |
 | Read-only investigation / How | Pass on sample | Independent investigator explained Unicode behavior and verified unchanged HEAD/status/diff/file hashes. |
 | Review / Interrogate | Partial pass on sample | Independent non-author reviewers executed tests and boundary probes, lead examined results; all inherited the same model. Full upstream cross-family panel not claimed. |
-| Architecture | Partial sample | Two concrete designs compared with execution. Initial fixture author evaluated both because slots were occupied; independent design panel not claimed. |
+| Architecture | Partial sample | Four independent native candidates in capacity-limited waves, separate judge, parent base/graft synthesis, selected sketch and implementation; 11/11 fixture checks plus non-author review. Same model; conditional scrap not exercised. See docs/acceptance/architect. |
 | Recall | Repository fallback passes | Checkpoint write/read/HEAD/AGENTS/history assertions. Native complete chat-history mining not tested. |
 | Reflect | Partial sample | Three actual parallel read-only reviewers plus a separate native synthesizer produced Accepted/Rejected/Backlog; exact template substitution verified. Same inherited model, labelled digest, no rule edits or external filing; see docs/acceptance/reflect. |
 | Native parallel agents | Pass | Concurrent audit/implementation and separate review agents ran in this actual task. Slot limits respected. |
@@ -69,7 +69,7 @@ The native tests isolate CODEX_HOME, not the user's real installed plugins. Wrap
 
 No native macOS or Linux host was available. The three-OS GitHub Actions workflow is supplied but has not run before publication. ChatGPT Work/ordinary Chat were not installed or executed live. No live gh authentication/PR queue/merge, multi-family model panel, cloud VM fleet, scheduler restart, complete-history mining, personal-mode generation, real UI recording/pixel comparison, profiler workload, or live Benny Slack/tracker/event integration was exercised.
 
-All 75 named source entries were audited and packaged. **10 entries received sampled agent workflow execution; 65 have no sampled full workflow run.** Helper tests and discovery do not erase that gap. **0 entries are certified complete 1:1 parity across all target hosts.** Detailed A/B/C/D architectural counts and every non-complete entry are in MIGRATION_MATRIX.md.
+All 75 named source entries were audited and packaged. **11 entries received sampled agent workflow execution; 64 have no sampled full workflow run.** Helper tests and discovery do not erase that gap. **0 entries are certified complete 1:1 parity across all target hosts.** Detailed A/B/C/D architectural counts and every non-complete entry are in MIGRATION_MATRIX.md.
 
 Initial sample-run deviations are retained in the acceptance reports: the Bug Fix worker did not copy the todo steps before execution; architecture/reflection initially used sequential lenses under occupied slots. These are evidence of sampled workflow limitations, not reasons to label the port fully equivalent. Subsequent independent read-only review substantiated fixture correctness, not perfect compliance with every instruction.
 

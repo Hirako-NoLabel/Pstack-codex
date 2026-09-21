@@ -7,8 +7,8 @@
     "D": 1
   },
   "total": 75,
-  "sampled_runtime_entries": 10,
-  "no_sampled_workflow_run": 65,
+  "sampled_runtime_entries": 11,
+  "no_sampled_workflow_run": 64,
   "rows": [
     {
       "id": "skill:architect",
@@ -20,7 +20,7 @@
       "cursor": "Cursor skill instructions and host-specific tools where referenced",
       "codex": "Conditional native tools with explicit coverage gaps",
       "work": "Documented skill-capable host; this workflow not live-tested",
-      "migration": "Preserve usage-first independent designs and synthesis. Same-model roles can replace unavailable cross-family panels; full parallel design panel untested.",
+      "migration": "Preserve usage-first independent designs and synthesis. Four independent same-model candidates, separate judge, parent synthesis and implemented fixture with 11 passing checks; model-family diversity and conditional scrap remain untested.",
       "validation": "Sampled runtime acceptance; limitations in VERIFICATION.md"
     },
     {
@@ -33,8 +33,8 @@
       "cursor": "Cursor skill instructions and host-specific tools where referenced",
       "codex": "Conditional native tools with explicit coverage gaps",
       "work": "Documented skill-capable host; this workflow not live-tested",
-      "migration": "Preserve same brief, isolated candidates, hidden rubric, base/graft and cross-judge. Cross-model diversity and cloud isolation conditional.",
-      "validation": "Audited and packaged; full workflow untested"
+      "migration": "Preserve same brief, isolated candidates, hidden rubric, base/graft and cross-judge. Four independent same-model directory-isolated candidates, private rubric, separate judge, base/graft and 11 passing synthesized-fixture checks executed; cross-model diversity and cloud isolation remain conditional.",
+      "validation": "Sampled runtime acceptance; limitations in VERIFICATION.md"
     },
     {
       "id": "skill:automate-me",

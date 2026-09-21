@@ -6,3 +6,4 @@
 *.jpg binary
 upstream/** -text
 docs/acceptance/reflect/** -text
+docs/acceptance/architect/** -text

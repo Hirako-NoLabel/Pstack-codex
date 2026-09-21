@@ -11,7 +11,7 @@ Status applies to this port's evidence, not every possible account. **Supported*
 | Bug Fix + cheap-path TDD | Supported | Untested | Partial | Actual failing-before/passing-after async request fixture. Chat needs executable tools for proof. |
 | Feature + default behavior preservation | Supported | Untested | Partial | Actual Unicode literal search option fixture. |
 | Investigation read-only | Supported | Untested | Partial | Reviewer read-only How run; hashes/status/diff unchanged. Chat can explain accessible source; repo access conditional. |
-| Architecture exploration | Partial | Untested | Partial | Two concrete alternatives evaluated; same author in acceptance, full independent architecture panel not executed. |
+| Architecture exploration | Partial | Untested | Partial | Four independent same-model candidates and separate judge, two distinct ownership shapes, parent synthesis and implemented fixture with 11 passing checks. Cross-family diversity and conditional redesign remain untested. |
 | Review panel / Interrogate | Partial | Untested | Partial | Independent native same-model reviewers and lead synthesis. Cross-family panel not verified; no model diversity claim. |
 | Review UI/panel | Partial | Untested | Unsupported | Native host review tools used only when exposed; portable file/line findings remain. Plugin adds no custom review UI. |
 | TDD, principles, writing, unslop | Partial | Untested | Untested | All preserved and discovered; TDD executed, not all 23 principles/writing behaviors independently evaluated. |

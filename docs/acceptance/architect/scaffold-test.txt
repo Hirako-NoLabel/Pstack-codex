@@ -1,0 +1,170 @@
+✖ same key coalesces; other key progresses independently (1.8575ms)
+✖ TTL starts on completion and expires at boundary (0.1992ms)
+✖ rejection is shared then retried (0.1815ms)
+✖ invalidation prevents stale success from replacing fresh value (0.2036ms)
+✖ invalidation prevents stale rejection from replacing fresh value (0.1368ms)
+✖ stale success cannot replace a newer pending entry (0.2258ms)
+✖ stale rejection cannot replace a newer pending entry (0.1365ms)
+✖ undefined is a cached value (0.1531ms)
+✖ invalid TTL is rejected (0.8425ms)
+✖ synchronous loader failure rejects and retries (0.2726ms)
+✖ pending ownership is published before reentrant loader invocation (0.2122ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 0
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 97.436
+
+✖ failing tests:
+
+test at work\architect-acceptance\behavior-tests.mjs:7:2
+✖ same key coalesces; other key progresses independently (1.8575ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:9:11)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at work\architect-acceptance\behavior-tests.mjs:13:2
+✖ TTL starts on completion and expires at boundary (0.1992ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:14:55)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at work\architect-acceptance\behavior-tests.mjs:18:2
+✖ rejection is shared then retried (0.1815ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:19:42)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at work\architect-acceptance\behavior-tests.mjs:23:40
+✖ invalidation prevents stale success from replacing fresh value (0.2036ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:24:61)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at work\architect-acceptance\behavior-tests.mjs:23:40
+✖ invalidation prevents stale rejection from replacing fresh value (0.1368ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:24:61)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at work\architect-acceptance\behavior-tests.mjs:30:40
+✖ stale success cannot replace a newer pending entry (0.2258ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:31:61)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at work\architect-acceptance\behavior-tests.mjs:30:40
+✖ stale rejection cannot replace a newer pending entry (0.1365ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:31:61)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at work\architect-acceptance\behavior-tests.mjs:35:2
+✖ undefined is a cached value (0.1531ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:35:67)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at work\architect-acceptance\behavior-tests.mjs:36:2
+✖ invalid TTL is rejected (0.8425ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+  
+  Error message:
+  
+  not implemented
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:36:84)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: not implemented
+        at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+        at file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:36:95
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:36:84)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+        at Test.postRun (node:internal/test_runner/test:1235:19)
+        at Test.run (node:internal/test_runner/test:1163:12),
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at work\architect-acceptance\behavior-tests.mjs:37:2
+✖ synchronous loader failure rejects and retries (0.2726ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:37:86)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at work\architect-acceptance\behavior-tests.mjs:38:2
+✖ pending ownership is published before reentrant loader invocation (0.2122ms)
+  Error: not implemented
+      at createLoadingCache (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/loading-cache.mjs:3:9)
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/architect-acceptance/behavior-tests.mjs:39:26)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)

@@ -1,0 +1,19 @@
+✔ same key coalesces; other key progresses independently (2.5359ms)
+✔ TTL starts on completion and expires at boundary (0.278ms)
+✔ rejection is shared then retried (0.3094ms)
+✔ invalidation prevents stale success from replacing fresh value (0.3293ms)
+✔ invalidation prevents stale rejection from replacing fresh value (0.1986ms)
+✔ stale success cannot replace a newer pending entry (0.293ms)
+✔ stale rejection cannot replace a newer pending entry (0.1871ms)
+✔ undefined is a cached value (0.169ms)
+✔ invalid TTL is rejected (0.6613ms)
+✔ synchronous loader failure rejects and retries (0.5696ms)
+✔ pending ownership is published before reentrant loader invocation (0.2197ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.8788
