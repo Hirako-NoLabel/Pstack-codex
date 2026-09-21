@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--test",
+    "loader.test.mjs"
+  ],
+  "cwd": "C:\\Users\\17416\\Documents\\Codex\\2026-09-22\\goal-referenced-pasted-text-files-pasted-2\\work\\acceptance\\bug-rerun",
+  "status": 1,
+  "signal": null,
+  "time": "2026-09-21T17:40:57.532Z"
+}

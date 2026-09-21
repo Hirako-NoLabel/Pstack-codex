@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const [name,...args]=process.argv.slice(2);
+if(!name||!args.length)throw new Error('receipt name and node arguments required');
+fs.mkdirSync('receipts',{recursive:true});
+const result=spawnSync(process.execPath,args,{encoding:'utf8'});
+fs.writeFileSync(`receipts/${name}.stdout.txt`,result.stdout);
+fs.writeFileSync(`receipts/${name}.stderr.txt`,result.stderr);
+fs.writeFileSync(`receipts/${name}.json`,JSON.stringify({command:[process.execPath,...args],cwd:process.cwd(),status:result.status,signal:result.signal,time:new Date().toISOString()},null,2));
+process.stdout.write(result.stdout);process.stderr.write(result.stderr);console.log(`RECORDED_EXIT=${result.status}`);
+process.exitCode=result.status;

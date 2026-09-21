@@ -1,0 +1,16 @@
+✔ overlapping same-key requests share one fetch and result (1.5987ms)
+✔ different keys remain independent while requests overlap (0.8823ms)
+✔ settled success does not become a permanent cache (0.1867ms)
+✔ overlapping rejection is shared and the next request retries (0.3252ms)
+✔ synchronous fetcher failure is rejected and can be retried (0.5879ms)
+✔ fetcher runs immediately and synchronous values stay synchronous (0.1494ms)
+✔ synchronous throws remain synchronous and retry works (0.1836ms)
+✔ separate loader instances do not share pending work (0.181ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 87.275

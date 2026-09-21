@@ -1,0 +1,92 @@
+diff --git a/loader.mjs b/loader.mjs
+index 0a65ae4..1c36fec 100644
+--- a/loader.mjs
++++ b/loader.mjs
+@@ -1,3 +1,11 @@
+ export function createLoader(fetcher) {
+-  return key => fetcher(key);
++  const pending = new Map();
++  return key => {
++    if (pending.has(key)) return pending.get(key);
++    const result = fetcher(key);
++    if (result == null || typeof result.then !== 'function') return result;
++    const request = Promise.resolve(result).finally(() => pending.delete(key));
++    pending.set(key, request);
++    return request;
++  };
+ }
+diff --git a/loader.test.mjs b/loader.test.mjs
+new file mode 100644
+index 0000000..7056a6c
+--- /dev/null
++++ b/loader.test.mjs
+@@ -0,0 +1,69 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {createLoader} from './loader.mjs';
++
++function deferred(){let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b;});return {promise,resolve,reject};}
++
++test('overlapping same-key requests share one fetch and result',async()=>{
++ const gate=deferred();const calls=[];
++ const load=createLoader(key=>{calls.push(key);return gate.promise;});
++ const first=load('alpha'),second=load('alpha');
++ await Promise.resolve();
++ assert.deepEqual(calls,['alpha']);
++ gate.resolve({value:'shared'});
++ const values=await Promise.all([first,second]);
++ assert.deepEqual(values,[{value:'shared'},{value:'shared'}]);
++ assert.equal(values[0],values[1]);
++});
++
++test('different keys remain independent while requests overlap',async()=>{
++ const gates={alpha:deferred(),beta:deferred()};const calls=[];
++ const load=createLoader(key=>{calls.push(key);return gates[key].promise;});
++ const alpha=load('alpha'),beta=load('beta');
++ await Promise.resolve();assert.deepEqual(calls,['alpha','beta']);
++ gates.beta.resolve('beta-value');assert.equal(await beta,'beta-value');
++ gates.alpha.resolve('alpha-value');assert.equal(await alpha,'alpha-value');
++});
++
++test('settled success does not become a permanent cache',async()=>{
++ let count=0;const load=createLoader(async key=>`${key}-${++count}`);
++ assert.equal(await load('alpha'),'alpha-1');assert.equal(await load('alpha'),'alpha-2');
++});
++
++test('overlapping rejection is shared and the next request retries',async()=>{
++ const gate=deferred();let count=0;
++ const load=createLoader(()=>++count===1?gate.promise:Promise.resolve('recovered'));
++ const first=load('alpha'),second=load('alpha');
++ const outcomes=Promise.allSettled([first,second]);
++ await Promise.resolve();gate.reject(new Error('offline'));
++ const results=await outcomes;
++ assert.deepEqual(results.map(x=>x.status),['rejected','rejected']);
++ assert.deepEqual(results.map(x=>x.reason.message),['offline','offline']);
++ assert.equal(count,1);assert.equal(await load('alpha'),'recovered');assert.equal(count,2);
++});
++
++test('synchronous fetcher failure is rejected and can be retried',async()=>{
++ let count=0;const load=createLoader(()=>{if(++count===1)throw new Error('sync failure');return 'recovered';});
++ await assert.rejects(async()=>load('alpha'),{message:'sync failure'});
++ assert.equal(await load('alpha'),'recovered');
++});
++
++test('fetcher runs immediately and synchronous values stay synchronous',()=>{
++ const calls=[];
++ const load=createLoader(key=>{calls.push(key);return 'value';});
++ assert.equal(load('alpha'),'value');
++ assert.deepEqual(calls,['alpha']);
++});
++
++test('synchronous throws remain synchronous and retry works',()=>{
++ let count=0;
++ const load=createLoader(()=>{if(++count===1)throw new Error('sync');return 'recovered';});
++ assert.throws(()=>load('alpha'),{message:'sync'});
++ assert.equal(load('alpha'),'recovered');
++});
++
++test('separate loader instances do not share pending work',async()=>{
++ const left=createLoader(async()=> 'left');
++ const right=createLoader(async()=> 'right');
++ assert.deepEqual(await Promise.all([left('alpha'),right('alpha')]),['left','right']);
++});

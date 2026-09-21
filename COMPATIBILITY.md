@@ -8,7 +8,7 @@ Status applies to this port's evidence, not every possible account. **Supported*
 | GitHub repository marketplace installation | Partial | Untested | Untested | Local-source lifecycle verified. Remote publication/install awaits owner approval. Local marketplaces differ from public directory listings. |
 | Poteto task dispatch | Supported | Untested | Untested | Bug/feature/how-investigation fixtures; all 23 route instructions retained, not all exercised. |
 | Sticky mode across conversation turns | Partial | Untested | Untested | Explicit conversation instruction replaces Cursor mode metadata; no platform-enforced sticky flag or automatic fresh-session activation. |
-| Bug Fix + cheap-path TDD | Supported | Untested | Partial | Actual failing-before/passing-after async request fixture. Chat needs executable tools for proof. |
+| Bug Fix + cheap-path TDD | Supported | Untested | Partial | Core rerun preserves sync contracts, has committed pre-work phases, native investigation/fix/review and 8 passing checks. Swarm leaf timing limitation retained. Chat needs executable tools for proof. |
 | Feature + default behavior preservation | Supported | Untested | Partial | Actual Unicode literal search option fixture. |
 | Investigation read-only | Supported | Untested | Partial | Reviewer read-only How run; hashes/status/diff unchanged. Chat can explain accessible source; repo access conditional. |
 | Architecture exploration | Partial | Untested | Partial | Four independent same-model candidates and separate judge, two distinct ownership shapes, parent synthesis and implemented fixture with 11 passing checks. Cross-family diversity and conditional redesign remain untested. |

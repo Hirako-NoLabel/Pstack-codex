@@ -6,7 +6,7 @@ const upstream=path.join(root,'upstream/pstack');
 const rows=[];
 const partialSkills=new Set(['architect','arena','automate-me','create-verification-skill','interrogate','maintain-verification-skill','recall','reflect','swarm','why']);
 const nativeSkills=new Set(['bro','tdd','technical-writing','typescript-best-practices','unslop']);
-const sampled=new Set(['poteto-mode','tdd','how','architect','arena','interrogate','recall','reflect','bug-fix','feature','investigation']);
+const sampled=new Set(['poteto-mode','tdd','how','why','architect','arena','interrogate','recall','reflect','bug-fix','feature','investigation']);
 const skillNotes={
  'make-bot-ui':'Native Cursor/Grok routine wake and secret card have no verified OpenAI equivalent. Complete UI/server flow retained for an explicitly configured external endpoint; native wake remains D.',
  'recall':'Use scoped native history when exposed, otherwise Git + AGENTS + handoff + checkpoint. Complete chat-history access cannot be guaranteed.',
@@ -16,7 +16,7 @@ const skillNotes={
  'arena':'Preserve same brief, isolated candidates, hidden rubric, base/graft and cross-judge. Four independent same-model directory-isolated candidates, private rubric, separate judge, base/graft and 11 passing synthesized-fixture checks executed; cross-model diversity and cloud isolation remain conditional.',
  'interrogate':'Native independent role reviewers and lead adjudication; acceptance used independent same-model reviewers, not upstream multi-family panel.',
  'swarm':'Native bounded workers preserve coverage and report dropped workers. No fake cloud Task environment or unlimited nesting.',
- 'why':'Discover actual connectors for seven source categories. Missing services explicitly reported; no claim that unavailable sources were searched.',
+ 'why':'Discover actual connectors for seven source categories. Local-history investigator plus separate native synthesizer executed in Bug Fix rerun; historical intent remained unknown. External source categories were explicitly excluded, not falsely searched.',
  'create-verification-skill':'Preserve launch/doctor/drive/evidence/cleanup and feature maps. Actual target control/recording tool required.',
  'maintain-verification-skill':'Retain source wave and one live pass, editing only verify skill. All-features UI pass depends on target app tools.',
  'setup-pstack':'PStack-owned project JSON with validated model + separate effort, inheritance defaults, panel length and budget preserved. No fabricated Codex rule schema.',

@@ -15,10 +15,10 @@ Date: 2026-09-22. Primary host: Windows, Codex CLI **0.155.0-alpha.9.2**, Node *
 | PowerShell wrapper lifecycle | Pass | Real local Git source/clone; 0.1.0 → 0.1.1 fast-forward update, installed cache marker and version checked, uninstall/reinstall, clean tree. |
 | Git Bash wrapper lifecycle | Pass after fix | Same real lifecycle on Windows. Initial path-format comparison failed; normalization fixed and failed side rerun. **Not a native Linux/macOS test.** |
 | Portable helper tests | 20/20 pass | Context recovery/corruption, upstream diff/staging boundary, configuration/effort validation, TSV injection/lock, plan gates, real worktree audit, Benny protocol. |
-| Executable acceptance regression suite | 22/22 pass | Bug Fix 5 + Feature 6 + Architect 11 now run automatically through test-all alongside 20 helper tests (42 total); this reruns fixture behavior, not native agent workflows. Three-OS CI uses this same command but has not executed remotely. |
+| Executable acceptance regression suite | 30/30 pass | Historical Bug Fix 5 + core rerun 8 + Feature 6 + Architect 11 run automatically through test-all alongside 20 helper tests (50 total); this reruns fixture behavior, not native agent workflows. Three-OS CI uses this same command but has not executed remotely. |
 | Bun orchestrator/watcher tests | 57/57 pass, 219 assertions | Retained upstream domain tests plus gh frontier/cycle adaptation. Mock GitHub reader is not live service verification. |
 | Type checks | Pass | Entire poteto scripts tree including orchestrator and watcher. |
-| Bug Fix + TDD | Pass on sample | Actual concurrent-loader defect: baseline 2 failures, fixed 5/5. Failing-test commit precedes fix commit. |
+| Bug Fix + TDD | Pass on core rerun | Native how/why lanes, delegated fix, independent review; pre-work phase commit precedes red tests and fix. Eight checks preserve synchronous baseline contracts; red 6 pass/2 fail to green 8 pass. Original 5-test sample retained historically; Swarm leaf phase timing limitation disclosed. |
 | Feature | Pass on sample | Default literal search retained; optional Unicode-insensitive search: baseline 5 failures, fixed 6/6. Actual design comparison included. |
 | Read-only investigation / How | Pass on sample | Independent investigator explained Unicode behavior and verified unchanged HEAD/status/diff/file hashes. |
 | Review / Interrogate | Partial pass on sample | Independent non-author reviewers executed tests and boundary probes, lead examined results; all inherited the same model. Full upstream cross-family panel not claimed. |
@@ -54,6 +54,14 @@ node scripts/test-wrappers.mjs --codex /absolute/path/to/codex --pwsh /absolute/
 
 The native tests isolate CODEX_HOME, not the user's real installed plugins. Wrapper fixtures use only local Git sources. Do not mistake their successful local update for a remote GitHub marketplace fetch.
 
+After authorized publication, verify the actual remote source with:
+
+```sh
+node scripts/test-native-host.mjs /absolute/path/to/codex /temporary/github-evidence Hirako-NoLabel/pstack-openai
+```
+
+The optional fourth argument uses a GitHub marketplace on `main`, its Git refresh command, and the same isolated discovery/remove/reinstall checks. This remote branch has not run yet. An unchanged-source refresh does not prove a version-changing update; that still requires a published source change and installed-cache readback. The default local-source lifecycle was rerun successfully after adding this option (47 skills); see `docs/verification/native-host-source-option.json`.
+
 ## Findings fixed before delivery
 
 - Native local marketplace sources reject the Git-only upgrade command; local update now re-registers the local source after fast-forward pull.
@@ -70,7 +78,7 @@ The native tests isolate CODEX_HOME, not the user's real installed plugins. Wrap
 
 No native macOS or Linux host was available. The three-OS GitHub Actions workflow is supplied but has not run before publication. ChatGPT Work/ordinary Chat were not installed or executed live. No live gh authentication/PR queue/merge, multi-family model panel, cloud VM fleet, scheduler restart, complete-history mining, personal-mode generation, real UI recording/pixel comparison, profiler workload, or live Benny Slack/tracker/event integration was exercised.
 
-All 75 named source entries were audited and packaged. **11 entries received sampled agent workflow execution; 64 have no sampled full workflow run.** Helper tests and discovery do not erase that gap. **0 entries are certified complete 1:1 parity across all target hosts.** Detailed A/B/C/D architectural counts and every non-complete entry are in MIGRATION_MATRIX.md.
+All 75 named source entries were audited and packaged. **12 entries received sampled agent workflow execution; 63 have no sampled full workflow run.** Helper tests and discovery do not erase that gap. **0 entries are certified complete 1:1 parity across all target hosts.** Detailed A/B/C/D architectural counts and every non-complete entry are in MIGRATION_MATRIX.md.
 
 Initial sample-run deviations are retained in the acceptance reports: the Bug Fix worker did not copy the todo steps before execution; architecture/reflection initially used sequential lenses under occupied slots. These are evidence of sampled workflow limitations, not reasons to label the port fully equivalent. Subsequent independent read-only review substantiated fixture correctness, not perfect compliance with every instruction.
 

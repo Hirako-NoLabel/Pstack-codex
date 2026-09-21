@@ -1,0 +1,4 @@
+917ac4ab0ca4ad7ccc14bd27979c2d214433c528 Record verbatim bug fix phases before investigation
+a3ddc76a89cee3f97a85c611d4d869a9c95886a5 test(loader): reproduce duplicate pending requests
+e9b1de45a323f06866b36519877acdb14b434a42 test(loader): preserve synchronous fetcher contracts
+dafea6bc835b638f1c16b0818b0e2524cb8b59ba fix(loader): share pending requests by key

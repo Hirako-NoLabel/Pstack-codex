@@ -1,0 +1,61 @@
+✖ overlapping same-key requests share one fetch and result (2.2925ms)
+✔ different keys remain independent while requests overlap (1.118ms)
+✔ settled success does not become a permanent cache (0.1675ms)
+✖ overlapping rejection is shared and the next request retries (0.4339ms)
+✔ synchronous fetcher failure is rejected and can be retried (0.5981ms)
+✔ fetcher runs immediately and synchronous values stay synchronous (0.1695ms)
+✔ synchronous throws remain synchronous and retry works (0.2161ms)
+✔ separate loader instances do not share pending work (0.1847ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.2775
+
+✖ failing tests:
+
+test at loader.test.mjs:7:1
+✖ overlapping same-key requests share one fetch and result (2.2925ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'alpha',
+  +   'alpha'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/bug-rerun/loader.test.mjs:12:9)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'alpha', 'alpha' ],
+    expected: [ 'alpha' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at loader.test.mjs:33:1
+✖ overlapping rejection is shared and the next request retries (0.4339ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'rejected',
+  +   'fulfilled'
+  -   'rejected'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/17416/Documents/Codex/2026-09-22/goal-referenced-pasted-text-files-pasted-2/work/acceptance/bug-rerun/loader.test.mjs:40:9)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'rejected', 'fulfilled' ],
+    expected: [ 'rejected', 'rejected' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

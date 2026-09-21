@@ -1,0 +1,10 @@
+ts	phase	decision	why	evidence	result
+2026-09-21T17:41:41.329Z	reproduce	Commit the failing behavior before implementation	Make the causal change auditable	receipts/red.json	red exit 1
+2026-09-21T17:42:41.436Z	plan	Keep pending state inside createLoader and preserve synchronous behavior	Root cause is missing pending state; no function boundary change is needed	evidence/investigation.md	architect skipped with scoped justification
+2026-09-21T17:43:40.202Z	limitation	Record the late Swarm subphase list	The Bug Fix steps were recorded before work but the four generic Swarm phases were appended after fan-out	PHASES.md	leaf timing limitation
+2026-09-21T17:43:40.263Z	limitation	Correct the initial file-copy working directory	The first command repeated the relative fixture path and failed without edits	receipts/red.json	retry succeeded before reproduction
+2026-09-21T17:44:19.536Z	verify	Accept the scoped worker fix after diff review and own runtime run	All eight fixture checks pass with synchronous behavior intact	receipts/green.json	green exit 0
+2026-09-21T17:47:14.937Z	correction	Qualify the earlier retry evidence pointer	The red receipt proves the corrected run, not the failed copy command; that failure is present only in visible tool history and report digest	REPORT.md	limited transcript coverage
+2026-09-21T17:48:08.344Z	checkpoint	Record the pre-fix baseline contract test commit	Immediate invocation and synchronous return and throw behavior needed explicit preservation before implementation	e9b1de45a323f06866b36519877acdb14b434a42	red exit 1 with six passes and two failures
+2026-09-21T17:48:08.407Z	limitation	Record the why worker metadata-scope correction	Initial broad filename discovery was metadata only; the worker then used permitted ancestry exclusively	evidence/why-investigator.md	worker-summary evidence only
+2026-09-21T17:48:08.467Z	review	Accept code PASS and retain trail ISSUES	Independent reviewer verified runtime and commit ordering but identified timing and transcript limits	evidence/independent-review.md	code PASS; process partially auditable

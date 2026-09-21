@@ -7,8 +7,8 @@
     "D": 1
   },
   "total": 75,
-  "sampled_runtime_entries": 11,
-  "no_sampled_workflow_run": 64,
+  "sampled_runtime_entries": 12,
+  "no_sampled_workflow_run": 63,
   "rows": [
     {
       "id": "skill:architect",
@@ -618,8 +618,8 @@
       "cursor": "Cursor skill instructions and host-specific tools where referenced",
       "codex": "Conditional native tools with explicit coverage gaps",
       "work": "Documented skill-capable host; this workflow not live-tested",
-      "migration": "Discover actual connectors for seven source categories. Missing services explicitly reported; no claim that unavailable sources were searched.",
-      "validation": "Audited and packaged; full workflow untested"
+      "migration": "Discover actual connectors for seven source categories. Local-history investigator plus separate native synthesizer executed in Bug Fix rerun; historical intent remained unknown. External source categories were explicitly excluded, not falsely searched.",
+      "validation": "Sampled runtime acceptance; limitations in VERIFICATION.md"
     },
     {
       "id": "playbook:authoring-a-skill",

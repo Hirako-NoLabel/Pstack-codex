@@ -9,6 +9,10 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const codex=process.argv[2] || 'codex';
 const parent=path.resolve(process.argv[3] || path.join(root,'work','native-host'));
+// Optional fourth argument selects a GitHub source for post-publication checks.
+const githubSource=process.argv[4];
+if(githubSource && !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(githubSource))throw new Error('GitHub source must be owner/repository');
+const source=githubSource || root;
 fs.mkdirSync(parent,{recursive:true});
 const home=fs.mkdtempSync(path.join(parent,'fresh home 中文 '));
 const env={...process.env,CODEX_HOME:home};
@@ -37,18 +41,21 @@ async function discover() {
 }
 try {
   run(['--version']);
-  run(['plugin','marketplace','add',root,'--json']);
+  run(['plugin','marketplace','add',source,...(githubSource?['--ref','main']:[]),'--json']);
   run(['plugin','add','pstack-openai@personal','--json']);
   run(['plugin','list','--json']);
   const expected=fs.readdirSync(path.join(root,'plugins/pstack-openai/skills')).filter(n=>fs.existsSync(path.join(root,'plugins/pstack-openai/skills',n,'SKILL.md'))).sort();
   assert.deepEqual((await discover()).filter(v=>v.enabled).map(v=>v.name.replace(/^pstack-openai:/,'')).sort(),expected);
-  run(['plugin','marketplace','add',root,'--json']);
+  if(githubSource)run(['plugin','marketplace','upgrade','personal','--json']);
+  else run(['plugin','marketplace','add',root,'--json']);
   run(['plugin','add','pstack-openai@personal','--json']);
   run(['plugin','remove','pstack-openai@personal','--json']);
   assert.equal((await discover()).filter(v=>v.enabled).length,0);
   run(['plugin','add','pstack-openai@personal','--json']);
   assert.equal((await discover()).filter(v=>v.enabled).length,expected.length);
-  evidence.push({result:'PASS',skill_count:expected.length,scope:'Fresh CODEX_HOME, real CLI and skills/list; local-source upgrade, not remote GitHub fetch or model workflow execution.'});
+  evidence.push({result:'PASS',skill_count:expected.length,source,scope:githubSource
+    ? 'Fresh CODEX_HOME, real GitHub marketplace fetch/refresh and skills/list lifecycle. Refresh without a source change does not prove a version-changing update; no model workflow execution.'
+    : 'Fresh CODEX_HOME, real CLI and skills/list; local-source reload, not remote GitHub fetch or model workflow execution.'});
 } catch(error) {evidence.push({result:'FAIL',error:error.stack});process.exitCode=1;}
 finally {
   const report=path.join(parent,'native-host.json');
